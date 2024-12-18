@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    // Grid to reorganise the page in larger view sizes
+    @media (min-width: $break-small) {
+        display: grid;
+        grid-template-columns: $nav__vertical--width 1fr;
+        grid-template-areas: "nav main";
+        grid-auto-flow: row;
+    }
+}
+
+
+main {
+
+    // Sizing properties
+
+    min-height: 100vh;
+    @media (min-width: $break-small) {
+        grid-area: main;
+    }
+
+    // Grid properties
+
+    display: grid;
+    grid-template-rows: $nav__horizontal-height repeat(2, minmax(200px, 1fr));
+    grid-auto-rows: minmax(200px, 1fr);
+    @media (min-width: $break-small) {
+        grid-template-rows: 1fr;
+        grid-auto-rows: 1fr;
+        grid-auto-flow: row;
+
+    }
+
+
+    // Styling properties
+
+    background: lightcoral;
+
+}
+
+nav {
+    border: 1px solid grey;
+    background: palevioletred;
+}
+
+#nav__vertical {
+    display: none;
+    float: left;
+    height: 100vh;
+
+    @media (min-width: $break-small) {
+        display: block;
+        grid-area: nav;
+    }
+}
+
+
+#nav__horizontal {
+    @media (min-width: $break-small) {
+        display: none;
+    }
+
+}
+
+
+section {
+    border: 1px solid grey;
+    background: aquamarine;
+}
+
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
