@@ -33,7 +33,7 @@ main {
 
     display: grid;
     grid-template-rows: $nav__horizontal-height repeat(2, minmax(200px, 1fr));
-    grid-auto-rows: minmax(200px, 1fr);
+    grid-auto-rows: 1fr;
     @media (min-width: $break-small) {
         grid-template-rows: 1fr;
         grid-auto-rows: 1fr;
