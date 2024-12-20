@@ -1,6 +1,9 @@
 nav {
     background: $white;
     z-index: 2;
+
+    color: $wenge;
+
 }
 
 #nav__vertical {
@@ -45,10 +48,13 @@ nav {
                     background: $colour;
                     background-clip: text;
                 }
-                &:hover {
+                &:hover,
+                &:focus {
                     i::after {
                         width: 100%;
+                        text-shadow: none;
                     }
+                    text-shadow: 0 0 10px $french-gray;
                 }
              }
         }
@@ -104,7 +110,8 @@ nav {
             border-radius: 50%;
             top: 0;
         }
-        &:hover::before {
+        &:hover::before,
+        &:focus::before {
             transform: rotate(180deg);
         }
     }
@@ -144,7 +151,8 @@ nav {
         background: $viking;
         margin-left: 0;
     }
-    &:hover {
+    &:hover,
+    &:focus {
         color: lighten($wenge, 10%);
         &::before,
         &::after {
@@ -177,7 +185,8 @@ nav {
         background: $viking;
         margin: auto;
     }
-    &:hover {
+    &:hover,
+    &:focus {
         color: lighten($wenge, 10%);
         &::before,
         &::after {

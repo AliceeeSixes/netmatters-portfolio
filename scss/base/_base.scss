@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     @include primary-font-stack;
+    outline: none;
+
 }
 
 
@@ -44,6 +46,7 @@ section {
 
 
 h1 {
+    color: $wenge;
     margin: auto;
     text-align: center;
 
@@ -68,7 +71,7 @@ h1 {
 
 a {
     text-decoration: none;
-    color: $wenge;
+    color: inherit;
     padding: 0;
     margin: 0;
 }

@@ -9,19 +9,11 @@
 
 
 #projects__grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-around;
 
-    @media (min-width: $break-medium) {
-        grid-template-columns: 1fr;
-        grid-auto-flow: row;
-    }
-    @media (min-width: $break-large) {
-        grid-template-columns: 1fr 1fr;
-    }
-    @media (min-width: $break-xl) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
 }
 
 .projects__card {
@@ -30,29 +22,33 @@
 
     // Sizing
     min-height: 200px;
-    min-width: 200px;
-    margin: 0;
+    width: 300px;
+    max-width: 600px;
+    flex: 0 1 auto;
+    margin: 20px 0;
     padding: 0;
 
     @media (min-width: $break-medium) {
         height: fit-content;
     }
-
-
-    // Styling
-    background: $viking;
-    transition: 0.3s ease;
-    &:hover {
-
+    @media (min-width: $break-xl) {
+        flex-basis: 25%;
     }
 
 
-        // corners
+    // Styling
+    background: $charcoal;
+    transition: 0.3s ease;
+    color: $white;
+
+
+    // corners
     border-radius: 10px 0 10px 0;
 
 
     // hover lift
-    &:hover {
+    &:hover,
+    &:focus-within {
         transform: translate(0, -10px);
         box-shadow: 0 10px 5px $wenge;
 

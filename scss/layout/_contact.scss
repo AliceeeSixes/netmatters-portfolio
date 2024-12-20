@@ -1,0 +1,20 @@
+#contact {
+    display: grid;
+    grid-auto-flow: row;
+    padding: 20px;
+    margin: 50px 0;
+    color: $wenge;
+    @media (min-width: $break-large) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+.contact__description {
+    p {
+        width: 100%;
+        text-wrap: wrap;
+    }
+}
+
+
