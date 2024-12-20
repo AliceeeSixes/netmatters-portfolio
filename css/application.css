@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes fadeInSlide {
+  0% {
+    transform: translate(0, -10px);
+    opacity: 0%; }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%; } }
+@keyframes fadeInSlow {
+  0% {
+    opacity: 0%; }
+  50% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
 * {
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
@@ -60,7 +74,8 @@ a {
   position: absolute;
   bottom: 0;
   font-size: 1.2em;
-  font-weight: 500; }
+  font-weight: 500;
+  animation: 2s ease 0s 1 fadeInSlow; }
   .page__arrow i {
     font-size: 1.5em; }
 
@@ -168,7 +183,8 @@ a {
     text-align: center; }
   #banner__inner h1,
   #banner__inner p {
-    color: inherit; }
+    color: inherit;
+    animation: 1s ease 0s 1 fadeInSlide; }
 
 nav {
   background: #fbfcff;
@@ -197,10 +213,27 @@ nav {
     display: flex;
     gap: 20px;
     border-top: 1px solid #605856; }
-    #nav__vertical .socials .socials__link[class*="discord"]:hover i {
-      color: #0067e0; }
-    #nav__vertical .socials .socials__link[class*="linkedin"]:hover i {
-      color: #0a66c2; }
+    #nav__vertical .socials i {
+      position: relative; }
+    #nav__vertical .socials .socials__link[class*="discord"] i::after {
+      background: #0067e0;
+      background-clip: text; }
+    #nav__vertical .socials .socials__link[class*="discord"]:hover i::after {
+      width: 100%; }
+    #nav__vertical .socials .socials__link[class*="linkedin"] i::after {
+      background: #0a66c2;
+      background-clip: text; }
+    #nav__vertical .socials .socials__link[class*="linkedin"]:hover i::after {
+      width: 100%; }
+    #nav__vertical .socials i::after {
+      transition: .3s ease;
+      content: var(--fa);
+      height: 100%;
+      width: 0;
+      top: 0;
+      display: block;
+      position: absolute;
+      color: transparent; }
 
 #nav__horizontal {
   height: fit-content;

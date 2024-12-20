@@ -1,0 +1,23 @@
+@keyframes fadeInSlide {
+    0% {
+        transform: translate(0, -10px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeInSlow{
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+
+}

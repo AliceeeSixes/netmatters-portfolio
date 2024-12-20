@@ -27,6 +27,9 @@ nav {
     }
 
     .socials {
+        i {
+            position: relative;
+        }
         width: 80%;
         margin: auto;
         padding: 10px;
@@ -37,13 +40,29 @@ nav {
         gap: 20px;
         border-top: 1px solid $wenge;
         @each $social, $colour in $socials-colours {
-             .socials__link[class*="#{$social}"]:hover {
-                i {
-                    color: $colour;
+             .socials__link[class*="#{$social}"] {
+                i::after {
+                    background: $colour;
+                    background-clip: text;
+                }
+                &:hover {
+                    i::after {
+                        width: 100%;
+                    }
                 }
              }
         }
+        i::after {
+            transition: .3s ease;
+            content: var(--fa);
+            height: 100%;
+            width: 0;
+            top: 0;
+            display: block;
+            position: absolute;
+            color: transparent;
 
+        }
     }
 }
 
