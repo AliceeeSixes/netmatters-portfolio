@@ -1,13 +1,15 @@
 nav {
-    background: $white;;
+    background: $white;
+    z-index: 2;
 }
 
 #nav__vertical {
 
-
+    position: fixed;
     display: none;
     float: left;
     min-width: $nav__vertical--width;
+    height: 100%;
 
 
     @media (min-width: $break-medium) {
@@ -24,7 +26,25 @@ nav {
         margin-top: 20px;
     }
 
+    .socials {
+        width: 80%;
+        margin: auto;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 2em;
+        justify-content: center;
+        display: flex;
+        gap: 20px;
+        border-top: 1px solid $wenge;
+        @each $social, $colour in $socials-colours {
+             .socials__link[class*="#{$social}"]:hover {
+                i {
+                    color: $colour;
+                }
+             }
+        }
 
+    }
 }
 
 
@@ -44,7 +64,7 @@ nav {
 
 #nav__vertical--logo {
     display: flex;
-    height: $banner__height;
+    height: 250px;
     width: $nav__vertical--width;
     &-link {
         display: block;

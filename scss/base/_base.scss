@@ -22,10 +22,12 @@ body {
 
 main {
 
+
     // Sizing properties
     min-height: 100vh;
     @media (min-width: $break-medium) {
         float: right;
+        margin-left: $nav__vertical--width;
     }
 
     // Styling properties
@@ -69,4 +71,18 @@ a {
     color: $wenge;
     padding: 0;
     margin: 0;
+}
+
+.page__arrow {
+    display: block;
+    margin-bottom: 10px;
+    align-self: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    i {
+        font-size: 1.5em;
+    }
 }
