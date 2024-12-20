@@ -1,16 +1,120 @@
+
+#projects {
+    padding: 20px;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+}
+
+
 #projects__grid {
     display: grid;
     gap: 20px;
 
-
     @media (min-width: $break-medium) {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-auto-flow: row;
+    }
+    @media (min-width: $break-large) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: $break-xl) {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 .projects__card {
+
+
+
+    // Sizing
     min-height: 200px;
     min-width: 200px;
-    background: orange;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $break-medium) {
+        height: fit-content;
+    }
+
+
+    // Styling
+    background: $viking;
+    transition: 0.3s ease;
+    &:hover {
+
+    }
+
+
+        // corners
+    border-radius: 10px 0 10px 0;
+
+
+    // hover lift
+    &:hover {
+        transform: translate(0, -10px);
+        box-shadow: 0 10px 5px $wenge;
+
+        .projects__card--img-container::before {
+            transform: translate(-20%, 0);
+        }
+    }
+
+}
+
+.projects__card--link {
+    display: block;
+    position: relative;
+}
+
+
+.projects__card--img-container {
+    height: 203px;
+    border-radius: 10px 0 10px 0;
+    border: 3px transparent;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: clip;
+    &::before {
+        transition: .5s ease;
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        background: linear-gradient(to right, $wenge 70%, $white);
+
+    }
+
+}
+.projects__card--img {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 200px;
+    border: none;
+    background: white;
+
+    // borders
+    border-radius: 10px 0 10px 0;
+
+}
+
+.projects__card--title {
+    padding-left: 1em;
+}
+
+.projects__card--desc {
+
+    @include text-overflow-ellipsis;
+
+    padding-left: 1em;
+
+    margin-bottom: 20px;
+
+
 }

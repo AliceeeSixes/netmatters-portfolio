@@ -1,0 +1,154 @@
+nav {
+    background: $white;;
+}
+
+#nav__vertical {
+
+
+    display: none;
+    float: left;
+    min-width: $nav__vertical--width;
+
+
+    @media (min-width: $break-medium) {
+        display: block;
+        grid-area: nav;
+    }
+
+    // Border
+    border-right: 3px solid $wenge;
+
+
+    // Spacing elements
+    h1 {
+        margin-top: 20px;
+    }
+
+
+}
+
+
+#nav__horizontal {
+    height: fit-content;
+    @media (min-width: $break-medium) {
+        display: none;
+    }
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+#nav__vertical--logo {
+    display: flex;
+    height: $banner__height;
+    width: $nav__vertical--width;
+    &-link {
+        display: block;
+        margin: auto;
+        align-self: center;
+        border-radius: 50%;
+        height: 50%;
+        background: transparent;
+        position: relative;
+        &::before {
+            transition: 0.5s ease;
+            position: absolute;
+            display: block;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: conic-gradient(from 225deg, $wenge, $white 50%, $viking 50%, $white);
+            border-radius: 50%;
+            top: 0;
+        }
+        &:hover::before {
+            transform: rotate(180deg);
+        }
+    }
+    &-img {
+        position: relative;
+        display: block;
+        z-index: 2;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid transparent;
+    }
+}
+
+
+.nav__vertical--button {
+    transition: 0.3s ease;
+    width: fit-content;
+    display: block;
+    font-size: 1.5em;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    &::after,
+    &::before {
+        transition: 0.5s ease;
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+
+    }
+    &::after {
+        background: $viking;
+        margin-left: auto;
+    }
+    &::before {
+        background: $viking;
+        margin-left: 0;
+    }
+    &:hover {
+        color: lighten($wenge, 10%);
+        &::before,
+        &::after {
+            width: 100%;
+        }
+    }
+    &.contact {
+        font-weight: 500;
+    }
+}
+
+.nav__horizontal--button {
+    transition: 0.3s ease;
+    width: fit-content;
+    display: block;
+    font-size: 1.5em;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    &::after,
+    &::before {
+        transition: 0.3s ease;
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+
+    }
+    &::after {
+        background: $viking;
+        margin: auto;
+    }
+    &:hover {
+        color: lighten($wenge, 10%);
+        &::before,
+        &::after {
+            width: 100%;
+        }
+    }
+    &.contact {
+        font-weight: 500;
+    }
+    &-container {
+        width: 250px;
+    }
+}

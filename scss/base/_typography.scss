@@ -1,0 +1,11 @@
+
+// Font Import
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+// Font Stack
+@mixin primary-font-stack {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    color: $wenge;
+}
