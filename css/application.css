@@ -97,22 +97,23 @@ a.in-text {
   .hover-underline:hover, .hover-underline:focus-within {
     text-decoration: underline; }
 
-#projects {
-  padding: 20px; }
-  #projects h1 {
-    margin-bottom: 20px; }
+@media (min-width: 576px) {
+  #projects {
+    padding: 20px; } }
+#projects h1 {
+  margin-bottom: 20px; }
 
 #projects__grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: space-around; }
+  @media (min-width: 576px) {
+    #projects__grid {
+      gap: 20px; } }
 
 .projects__card {
-  min-height: 200px;
-  min-width: 400px;
-  max-width: 600px;
-  flex: 1 1 auto;
+  height: 400px;
+  flex: 0 1 auto;
   margin: 20px 0;
   padding: 0;
   background: #274a56;
@@ -121,7 +122,10 @@ a.in-text {
   border-radius: 10px 0 10px 0; }
   @media (min-width: 768px) {
     .projects__card {
-      height: fit-content; } }
+      height: fit-content;
+      min-width: 400px;
+      max-width: 600px;
+      flex: 1 1 auto; } }
   @media (min-width: 1200px) {
     .projects__card {
       flex-basis: 25%; } }
@@ -133,7 +137,8 @@ a.in-text {
 
 .projects__card--link {
   display: block;
-  position: relative; }
+  position: relative;
+  height: 100%; }
 
 .projects__card--img-container {
   height: 203px;
@@ -387,9 +392,11 @@ nav {
 #contact {
   display: grid;
   grid-auto-flow: row;
-  padding: 20px;
   margin: 50px 0;
   color: #605856; }
+  @media (min-width: 576px) {
+    #contact {
+      padding: 20px; } }
   @media (min-width: 992px) {
     #contact {
       grid-template-columns: 1fr 1fr; } }

@@ -1,6 +1,8 @@
 
 #projects {
-    padding: 20px;
+    @media (min-width: $break-small) {
+        padding: 20px;
+    }
 
     h1 {
         margin-bottom: 20px;
@@ -11,8 +13,11 @@
 #projects__grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    
     justify-content: space-around;
+    @media (min-width: $break-small) {
+        gap: 20px;
+    }
 
 }
 
@@ -21,15 +26,17 @@
 
 
     // Sizing
-    min-height: 200px;
-    min-width: 400px;
-    max-width: 600px;
-    flex: 1 1 auto;
+    height: 400px;
+    
+    flex: 0 1 auto;
     margin: 20px 0;
     padding: 0;
 
     @media (min-width: $break-medium) {
         height: fit-content;
+        min-width: 400px;
+        max-width: 600px;
+        flex: 1 1 auto;
     }
     @media (min-width: $break-xl) {
         flex-basis: 25%;
@@ -62,6 +69,7 @@
 .projects__card--link {
     display: block;
     position: relative;
+    height: 100%;
 }
 
 

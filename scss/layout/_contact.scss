@@ -1,9 +1,11 @@
 #contact {
     display: grid;
     grid-auto-flow: row;
-    padding: 20px;
     margin: 50px 0;
     color: $wenge;
+    @media (min-width: $break-small) {
+        padding: 20px;
+    }
     @media (min-width: $break-large) {
         grid-template-columns: 1fr 1fr;
     }
