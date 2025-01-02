@@ -81,6 +81,7 @@ textarea {
     margin: auto;
     & input{
         background-color: $french-gray;
+        font-weight: 400;
     }
     @media (min-width: $break-medium) {
         grid-column: span 2;

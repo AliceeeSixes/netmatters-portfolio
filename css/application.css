@@ -371,6 +371,11 @@ nav {
   margin: auto;
   margin-top: 20px; }
 
+footer {
+  width: 100%;
+  text-align: center;
+  color: #605856; }
+
 form {
   height: fit-content;
   border-radius: 5px 0 5px 0;
@@ -436,7 +441,8 @@ textarea {
   width: 50%;
   margin: auto; }
   .submit input {
-    background-color: #d0ccd0; }
+    background-color: #d0ccd0;
+    font-weight: 400; }
   @media (min-width: 768px) {
     .submit {
       grid-column: span 2; } }
