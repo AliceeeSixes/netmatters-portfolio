@@ -17,7 +17,8 @@
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
-  outline: none; }
+  outline: none;
+  scroll-behavior: smooth; }
 
 body {
   width: 100%;
@@ -126,7 +127,7 @@ a {
   padding: 0;
   position: relative;
   overflow: clip;
-  background: #fbfcff; }
+  background: #605856; }
   .projects__card--img-container::before {
     transition: .3s ease;
     content: "";
@@ -134,7 +135,7 @@ a {
     left: 0;
     width: 0%;
     height: 100%;
-    background: linear-gradient(to left, #fbfcff 0%, #74d1db 80%); }
+    background: linear-gradient(to left, #605856 0%, #74d1db 80%); }
 
 .projects__card--img {
   position: relative;
@@ -161,8 +162,15 @@ a {
 #banner {
   position: relative;
   height: 400px;
-  background: #ffaaa5;
   display: flex; }
+
+#banner__img {
+  background: url(../img/code_screenshot.png);
+  background-size: cover;
+  filter: blur(5px);
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
 #banner__inner {
   align-self: center;
@@ -172,7 +180,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fbfcff; }
+  color: #fbfcff;
+  z-index: 1; }
   #banner__inner h1 {
     margin: 20px;
     font-weight: 500;
@@ -356,8 +365,10 @@ nav {
       grid-template-columns: 1fr 1fr; } }
 
 .contact__description p {
-  width: 100%;
-  text-wrap: wrap; }
+  width: 80%;
+  text-wrap: wrap;
+  margin: auto;
+  margin-top: 20px; }
 
 form {
   height: fit-content;
@@ -419,5 +430,17 @@ textarea {
 
 textarea {
   overflow: auto; }
+
+.submit {
+  width: 50%;
+  margin-top: 50px;
+  margin: auto; }
+  .submit input {
+    background-color: #d0ccd0; }
+  @media (min-width: 768px) {
+    .submit {
+      grid-column: span 2; } }
+  .submit:hover input, .submit:focus-within input {
+    background-color: #74d1db; }
 
 /*# sourceMappingURL=application.css.map */

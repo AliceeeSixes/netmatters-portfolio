@@ -76,3 +76,20 @@ textarea {
 
 }
 
+.submit {
+    width: 50%;
+    margin-top: 50px;
+    margin: auto;
+    & input{
+        background-color: $french-gray;
+    }
+    @media (min-width: $break-medium) {
+        grid-column: span 2;
+    }
+    &:hover,
+    &:focus-within {
+        input {
+            background-color: $viking;
+        }
+    }
+}
