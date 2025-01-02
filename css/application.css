@@ -112,7 +112,7 @@ a {
     transform: translate(0, -10px);
     box-shadow: 0 10px 5px #605856; }
     .projects__card:hover .projects__card--img-container::before, .projects__card:focus-within .projects__card--img-container::before {
-      width: 50%; }
+      width: 100%; }
 
 .projects__card--link {
   display: block;
@@ -126,15 +126,15 @@ a {
   padding: 0;
   position: relative;
   overflow: clip;
-  background: #605856; }
+  background: #fbfcff; }
   .projects__card--img-container::before {
     transition: .3s ease;
     content: "";
     position: absolute;
-    right: 0;
-    width: 100%;
+    left: 0;
+    width: 0%;
     height: 100%;
-    background: linear-gradient(to right, #605856 30%, #fbfcff 95%); }
+    background: linear-gradient(to left, #fbfcff 0%, #74d1db 80%); }
 
 .projects__card--img {
   position: relative;
