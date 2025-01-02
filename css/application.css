@@ -82,8 +82,19 @@ a {
     font-size: 1.5em; }
 
 a.in-text {
-  color: #74d1db; }
+  color: #74d1db;
+  transition: 0.3s ease; }
   a.in-text:hover, a.in-text:focus-within {
+    text-decoration: underline; }
+
+.hover-glow {
+  transition: 0.3s ease; }
+  .hover-glow:hover, .hover-glow:focus-within {
+    text-shadow: 0 0 10px #fbfcff; }
+
+.hover-underline {
+  transition: 0.3s ease; }
+  .hover-underline:hover, .hover-underline:focus-within {
     text-decoration: underline; }
 
 #projects {
@@ -155,7 +166,8 @@ a.in-text {
   border-radius: 10px 0 10px 0; }
 
 .projects__card--title {
-  padding-left: 1em; }
+  padding-left: 1em;
+  text-decoration: underline; }
 
 .projects__card--desc {
   display: -webkit-box;
@@ -163,8 +175,15 @@ a.in-text {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  padding-left: 1em;
-  margin-bottom: 20px; }
+  padding-left: 1em; }
+
+.projects__card--arrow {
+  margin-bottom: 20px;
+  padding-left: 1em; }
+  .projects__card--arrow span {
+    font-weight: 600; }
+  .projects__card--arrow a {
+    display: inline; }
 
 #banner {
   position: relative;
@@ -203,7 +222,8 @@ a.in-text {
   #banner__inner h1,
   #banner__inner p {
     color: inherit;
-    animation: 1s ease 0s 1 fadeInSlide; }
+    animation: 1s ease 0s 1 fadeInSlide;
+    cursor: default; }
 
 nav {
   background: #fbfcff;
@@ -452,6 +472,7 @@ textarea {
   width: 50%;
   margin: auto; }
   .submit input {
+    cursor: pointer;
     background-color: #d0ccd0;
     font-weight: 400; }
   @media (min-width: 768px) {

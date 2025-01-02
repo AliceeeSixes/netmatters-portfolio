@@ -97,4 +97,23 @@ a.in-text {
     &:focus-within {
         text-decoration: underline;
     }
+
+    transition: 0.3s ease;
 }
+
+.hover-glow {
+    &:hover,
+    &:focus-within {
+        text-shadow: 0 0 10px $white;
+    }
+    transition: 0.3s ease;
+}
+
+.hover-underline {
+    &:hover,
+    &:focus-within {
+        text-decoration: underline;
+    }
+    transition: 0.3s ease;
+}
+  

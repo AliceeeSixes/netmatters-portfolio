@@ -80,6 +80,7 @@ textarea {
     width: 50%;
     margin: auto;
     & input{
+        cursor: pointer;
         background-color: $french-gray;
         font-weight: 400;
     }
