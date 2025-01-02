@@ -32,6 +32,10 @@ main {
         margin-left: $nav__vertical--width;
     }
 
+    width: 100%;
+    position: relative;
+
+
     // Styling properties
 
     background: $white;
@@ -42,6 +46,7 @@ main {
 
 section {
     background: $white;
+
 }
 
 
