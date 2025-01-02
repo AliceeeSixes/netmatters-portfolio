@@ -90,3 +90,11 @@ a {
     }
     animation: 2s ease 0s 1 fadeInSlow;
 }
+
+a.in-text {
+    color: $viking;
+    &:hover,
+    &:focus-within {
+        text-decoration: underline;
+    }
+}

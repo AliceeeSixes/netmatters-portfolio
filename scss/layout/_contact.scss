@@ -11,11 +11,12 @@
 }
 
 .contact__description {
+    width: 80%;
+    height: 100%;
+    margin: auto;
     p {
-        width: 80%;
+        width: 100%;
         text-wrap: wrap;
-        margin: auto;
-        margin-top: 20px;
 
     }
 }

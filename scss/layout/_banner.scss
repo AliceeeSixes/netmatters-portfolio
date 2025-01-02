@@ -1,6 +1,9 @@
 #banner {
     position: relative;
-    height: $banner__height;
+    height: 100vh;
+    @media (min-width: $break-xl) {
+        height: $banner__height;
+    }
     display: flex;
 }
 

@@ -81,6 +81,11 @@ a {
   .page__arrow i {
     font-size: 1.5em; }
 
+a.in-text {
+  color: #74d1db; }
+  a.in-text:hover, a.in-text:focus-within {
+    text-decoration: underline; }
+
 #projects {
   padding: 20px; }
   #projects h1 {
@@ -162,8 +167,11 @@ a {
 
 #banner {
   position: relative;
-  height: 400px;
+  height: 100vh;
   display: flex; }
+  @media (min-width: 1200px) {
+    #banner {
+      height: 400px; } }
 
 #banner__img {
   background: url(../img/code_screenshot.png);
@@ -365,11 +373,13 @@ nav {
     #contact {
       grid-template-columns: 1fr 1fr; } }
 
-.contact__description p {
+.contact__description {
   width: 80%;
-  text-wrap: wrap;
-  margin: auto;
-  margin-top: 20px; }
+  height: 100%;
+  margin: auto; }
+  .contact__description p {
+    width: 100%;
+    text-wrap: wrap; }
 
 footer {
   width: 100%;
