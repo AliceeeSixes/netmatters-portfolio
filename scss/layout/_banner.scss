@@ -1,4 +1,5 @@
 #banner {
+    padding: 0;
     position: relative;
     height: 100vh;
     @media (min-width: $break-xl) {
@@ -42,6 +43,6 @@
         color: inherit;
         animation: 1s ease 0s 1 fadeInSlide;
         cursor: default;
-        
+
     }
 }

@@ -99,6 +99,11 @@ a.in-text {
   .hover-underline:hover, .hover-underline:focus-within {
     text-decoration: underline; }
 
+p.centered {
+  text-align: center;
+  width: 80%;
+  margin: auto; }
+
 @media (min-width: 576px) {
   #projects {
     padding: 20px; } }
@@ -193,6 +198,7 @@ a.in-text {
     display: inline; }
 
 #banner {
+  padding: 0;
   position: relative;
   height: 100vh;
   display: flex; }
@@ -419,13 +425,22 @@ footer {
   position: absolute;
   bottom: 0; }
 
+section {
+  color: #605856; }
+  @media (min-width: 576px) {
+    section {
+      padding: 20px; } }
+  section h1 {
+    margin-bottom: 20px; }
+
 form {
   height: fit-content;
   border-radius: 5px 0 5px 0;
   display: grid;
   grid-auto-flow: row;
   grid-auto-rows: min-content;
-  gap: 20px; }
+  gap: 20px;
+  margin-bottom: 50px; }
   @media (min-width: 1200px) {
     form {
       grid-template-columns: 1fr 1fr; } }
