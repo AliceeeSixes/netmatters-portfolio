@@ -99,9 +99,9 @@ a.in-text {
 
 .projects__card {
   min-height: 200px;
-  width: 300px;
+  min-width: 400px;
   max-width: 600px;
-  flex: 0 1 auto;
+  flex: 1 1 auto;
   margin: 20px 0;
   padding: 0;
   background: #274a56;
@@ -150,7 +150,8 @@ a.in-text {
   width: 100%;
   height: 200px;
   border: none;
-  background: white;
+  background: url(../img/NM-remake.png);
+  background-size: cover;
   border-radius: 10px 0 10px 0; }
 
 .projects__card--title {
