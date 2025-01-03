@@ -59,6 +59,11 @@ h1 {
 
 .section__title {
     padding: 20px;
+    @media (min-width: $break-medium) {
+        margin: 20px auto 20px auto;
+    }
+    font-weight: 500;
+    font-size: 2.5em;
     &::before {
         display: block;
         position: relative;
@@ -72,6 +77,7 @@ h1 {
             display: none;
         }
     }
+    text-decoration: underline;
 }
 
 a {
@@ -103,6 +109,7 @@ a.in-text {
         text-decoration: underline;
     }
 
+
     transition: 0.3s ease;
 }
 
@@ -122,8 +129,15 @@ a.in-text {
     transition: 0.3s ease;
 }
   
-p.centered {
+.centered {
     text-align: center;
-    width: 80%;
     margin: auto;
+    &p {
+        width: 80%;
+    }
+}
+
+.dark {
+    color: $white;
+    background: $charcoal;
 }

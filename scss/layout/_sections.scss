@@ -8,4 +8,49 @@ section {
     }
 
     color: $wenge;
+    background: none;
 }
+
+section.tall {
+    height: 100vh;
+}
+
+section.hero {
+    align-content: center;
+    box-shadow: 0 0 10px $wenge;
+
+    &.dark {
+        text-shadow: 0 0 5px $wenge;
+    }
+    p,
+    h1,
+    h2,
+    h3,
+    ul,
+    li {
+        width: 80%;
+        margin: auto;
+        padding: 10px;
+        text-wrap: balance;
+        @include secondary-font-stack;
+        @media (min-width: $break-small) {
+            padding: 20px;
+        }
+        list-style-position: inside;
+    }
+
+    font-size: 1.2em;
+    @media (min-width: $break-small) {
+        font-size: 1.5em;
+    }
+    @media (min-width: $break-large) {
+        font-size: 2em;
+    }
+
+    * {
+        animation: 1s ease 0s 1 fadeInSlide;
+    }
+
+    
+}
+

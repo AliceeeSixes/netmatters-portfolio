@@ -83,6 +83,8 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    position: sticky;
+    top: 0;
 
 }
 
@@ -170,8 +172,8 @@ nav {
     display: block;
     font-size: 1.5em;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     &::after,
     &::before {
