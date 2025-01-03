@@ -12,3 +12,10 @@
         }
     }
 }
+
+#netmatters-logo {
+    padding: 10px;
+    @media (min-width: $break-medium) {
+        padding: 20px;
+    }
+}
