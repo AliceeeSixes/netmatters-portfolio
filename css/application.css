@@ -470,9 +470,7 @@ section.hero {
   section.hero p,
   section.hero h1,
   section.hero h2,
-  section.hero h3,
-  section.hero ul,
-  section.hero li {
+  section.hero h3 {
     width: 80%;
     margin: auto;
     padding: 10px;
@@ -484,9 +482,7 @@ section.hero {
       section.hero p,
       section.hero h1,
       section.hero h2,
-      section.hero h3,
-      section.hero ul,
-      section.hero li {
+      section.hero h3 {
         padding: 20px; } }
   @media (min-width: 576px) {
     section.hero {
@@ -509,6 +505,18 @@ section.hero {
   @media (min-width: 768px) {
     #treehouse {
       background-position: calc(50% + 125px), 50%; } }
+
+#netmatters-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  #netmatters-list h4 {
+    margin: 5px;
+    font-size: 0.8em; }
+    #netmatters-list h4::before {
+      content: "\2022";
+      padding: 5px; }
 
 form {
   height: fit-content;

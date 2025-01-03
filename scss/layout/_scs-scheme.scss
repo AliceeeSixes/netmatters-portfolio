@@ -1,0 +1,14 @@
+#netmatters-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h4 {
+        margin: 5px;
+        font-size: 0.8em;
+        &::before {
+            content: "\2022";
+            padding: 5px;
+        }
+    }
+}
