@@ -60,3 +60,16 @@ section.hero {
 }
 
 
+#treehouse {
+    width: 100%;
+    background: url("../img/treehouse.png") no-repeat center;
+    background-attachment: fixed;
+    background-size: contain;
+    text-shadow: 0 0 2px $white;
+
+
+    // Fix centering broken by attachment fixed
+    @media (min-width: $break-medium) {
+        background-position: calc(50% + 125px), 50%;
+    }
+}

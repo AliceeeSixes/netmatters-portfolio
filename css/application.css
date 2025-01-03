@@ -500,6 +500,16 @@ section.hero {
 .snap-point {
   scroll-snap-align: start; }
 
+#treehouse {
+  width: 100%;
+  background: url("../img/treehouse.png") no-repeat center;
+  background-attachment: fixed;
+  background-size: contain;
+  text-shadow: 0 0 2px #fbfcff; }
+  @media (min-width: 768px) {
+    #treehouse {
+      background-position: calc(50% + 125px), 50%; } }
+
 form {
   height: fit-content;
   border-radius: 5px 0 5px 0;
