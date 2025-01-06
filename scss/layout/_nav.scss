@@ -85,6 +85,22 @@ nav {
     justify-content: center;
     position: sticky;
     top: 0;
+    
+
+
+    &::after {
+        display: block;
+        position: relative;
+        top: -10px;
+        content: "";
+        width: 80%;
+        height: 1px;
+        background: $wenge;
+        margin: auto;
+        @media (min-width: $break-medium) {
+            display: none;
+        }
+    }
 
 }
 

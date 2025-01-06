@@ -40,7 +40,8 @@ main {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background: #fbfcff; }
+  background: #fbfcff;
+  overflow: hidden; }
   @media (min-width: 768px) {
     main {
       float: right;
@@ -62,18 +63,6 @@ h1 {
   @media (min-width: 768px) {
     .section__title {
       margin: 20px auto 20px auto; } }
-  .section__title::before {
-    display: block;
-    position: relative;
-    top: -20px;
-    content: "";
-    width: 80%;
-    height: 1px;
-    background: #605856;
-    margin: auto; }
-    @media (min-width: 768px) {
-      .section__title::before {
-        display: none; } }
 
 a {
   text-decoration: none;
@@ -119,6 +108,8 @@ a.in-text {
 .dark {
   color: #fbfcff;
   background: #274a56; }
+  .dark * {
+    color: #fbfcff; }
 
 @media (min-width: 576px) {
   #projects {
@@ -331,6 +322,18 @@ nav {
   @media (min-width: 768px) {
     #nav__horizontal {
       display: none; } }
+  #nav__horizontal::after {
+    display: block;
+    position: relative;
+    top: -10px;
+    content: "";
+    width: 80%;
+    height: 1px;
+    background: #605856;
+    margin: auto; }
+    @media (min-width: 768px) {
+      #nav__horizontal::after {
+        display: none; } }
 
 #nav__vertical--logo {
   display: flex;
@@ -453,7 +456,7 @@ footer {
 
 section {
   color: #605856;
-  background: none; }
+  background: #fbfcff; }
   @media (min-width: 576px) {
     section {
       padding: 20px; } }
@@ -509,6 +512,62 @@ section.hero {
   #treehouse a {
     text-shadow: 0 0 2px #605856; }
 
+section.about-me p {
+  width: 50%;
+  font-size: 1.5em; }
+section.about-me h1 {
+  font-size: 2em; }
+section.about-me * {
+  animation: 1s ease 1 fadeInSlide; }
+
+section.about-me:nth-of-type(0) * {
+  opacity: 0;
+  animation-delay: -0.5s;
+  animation-fill-mode: forwards; }
+@media (min-width: 992px) {
+  section.about-me:nth-of-type(0) {
+    margin-left: -20%; } }
+
+section.about-me:nth-of-type(1) * {
+  opacity: 0;
+  animation-delay: 0s;
+  animation-fill-mode: forwards; }
+@media (min-width: 992px) {
+  section.about-me:nth-of-type(1) {
+    margin-right: -20%; } }
+
+section.about-me:nth-of-type(2) * {
+  opacity: 0;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards; }
+@media (min-width: 992px) {
+  section.about-me:nth-of-type(2) {
+    margin-left: -20%; } }
+
+section.about-me:nth-of-type(3) * {
+  opacity: 0;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; }
+@media (min-width: 992px) {
+  section.about-me:nth-of-type(3) {
+    margin-right: -20%; } }
+
+section.about-me:nth-of-type(4) * {
+  opacity: 0;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards; }
+@media (min-width: 992px) {
+  section.about-me:nth-of-type(4) {
+    margin-left: -20%; } }
+
+section.about-me:nth-of-type(5) * {
+  opacity: 0;
+  animation-delay: 2s;
+  animation-fill-mode: forwards; }
+@media (min-width: 992px) {
+  section.about-me:nth-of-type(5) {
+    margin-right: -20%; } }
+
 #netmatters-list {
   margin-top: 20px;
   display: flex;
@@ -526,6 +585,25 @@ section.hero {
   @media (min-width: 768px) {
     #netmatters-logo {
       padding: 20px; } }
+
+.slant-bottom {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw)); }
+
+.slant-top {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  clip-path: polygon(0 6vw, 100% 0, 100% 100%, 0 100%); }
+
+.slant-both {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  clip-path: polygon(0 6vw, 100% 0, 100% 100%, 0 calc(100% - 6vw)); }
+
+.slant-none {
+  padding-top: 100px;
+  padding-bottom: 100px; }
 
 form {
   height: fit-content;

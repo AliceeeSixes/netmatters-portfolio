@@ -8,7 +8,7 @@ section {
     }
 
     color: $wenge;
-    background: none;
+    background: $white;
 }
 
 section.tall {
@@ -72,4 +72,37 @@ section.hero {
     a {
         text-shadow: 0 0 2px $wenge;
     }
+}
+
+section.about-me {
+    p {
+        width: 50%;
+        font-size: 1.5em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    * {
+        animation: 1s ease 1 fadeInSlide;
+    }
+
+
+}
+
+@for $i from 0 through 5 {
+        section.about-me:nth-of-type(#{$i}) {
+            * {
+                opacity: 0;
+                animation-delay: #{($i - 1) / 2}s;
+                animation-fill-mode: forwards;
+            }
+            @media (min-width: $break-large) {
+                @if $i % 2 == 0 {
+                    margin-left: -20%;
+                }
+                @else {
+                    margin-right: -20%;
+                }
+            }
+        }
 }

@@ -53,6 +53,8 @@ main {
 
     background: $white;
 
+    overflow: hidden;
+
 
 
 }
@@ -79,19 +81,6 @@ h1 {
     }
     font-weight: 500;
     font-size: 2.5em;
-    &::before {
-        display: block;
-        position: relative;
-        top: -20px;
-        content: "";
-        width: 80%;
-        height: 1px;
-        background: $wenge;
-        margin: auto;
-        @media (min-width: $break-medium) {
-            display: none;
-        }
-    }
     text-decoration: underline;
 }
 
@@ -154,6 +143,9 @@ a.in-text {
 
 .dark {
     color: $white;
+    * {
+        color: $white;
+    }
     background: $charcoal;
 }
 
