@@ -47,7 +47,9 @@ main {
 
     background: $white;
 
-    overflow-x: hidden;
+    @media (min-width: $break-large) {
+        overflow-x: hidden;
+    }
 
 
 

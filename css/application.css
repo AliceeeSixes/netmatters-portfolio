@@ -41,12 +41,14 @@ main {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background: #fbfcff;
-  overflow-x: hidden; }
+  background: #fbfcff; }
   @media (min-width: 768px) {
     main {
       float: right;
       margin-left: 250px; } }
+  @media (min-width: 992px) {
+    main {
+      overflow-x: hidden; } }
 
 section {
   background: #fbfcff; }
