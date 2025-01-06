@@ -514,7 +514,8 @@ section.hero {
 
 section.about-me p {
   width: 50%;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  text-wrap: balance; }
 section.about-me h1 {
   font-size: 2em; }
 section.about-me * {
