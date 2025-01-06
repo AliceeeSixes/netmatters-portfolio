@@ -74,21 +74,75 @@ section.hero {
     }
 }
 
+
+
+
+// About Me Sections
+
 section.about-me {
+    min-height: 40%;
+    align-content: center;
     p {
         width: 50%;
+        max-width: 800px;
         font-size: 1.5em;
         text-wrap: balance;
+        @media (min-width: $break-xl) {
+            font-size: 1.7em;
+        }
     }
     h1 {
         font-size: 2em;
+        @media (min-width: $break-xl) {
+            font-size: 2.2em;
+        }
     }
     * {
         animation: 1s ease 1 fadeInSlide;
     }
+    h1,
+    p {
+        z-index: 2;
+        position: relative;
+    }
+    position: relative;
+    overflow: hidden;
 
+    &::after {
+        content: "";
+        height: 150%;
+        width: 30vw;
+        position: absolute;
+        bottom: -25%;
+        display: none;
+        @media (min-width: $break-large) {
+            display: block;
+        }
+        transition: 0.3s ease;
+        
+    }
 
+    &:hover::after {
+        width: 32vw;
+    }
 
+    &:last-of-type {
+        margin-bottom: 250px;
+    }
+
+}
+
+@each $number, $image in $about-me--images {
+    section.about-me:nth-of-type(#{$number})::after {
+        @if $number % 2 == 0 {
+            background: linear-gradient(to right, $white, transparent), url(#{$image}) center;
+            background-size: cover;
+        }
+        @else {
+            background: linear-gradient(to left, $charcoal, transparent), url(#{$image}) center;
+            background-size: cover;
+        }
+    }
 }
 
 @for $i from 0 through 5 {
@@ -100,10 +154,16 @@ section.about-me {
             }
             @media (min-width: $break-large) {
                 @if $i % 2 == 0 {
-                    margin-left: -20%;
+                    margin-left: -25%;
+                    &::after {
+                        right: 0;
+                    }
                 }
                 @else {
-                    margin-right: -20%;
+                    margin-right: -25%;
+                    &::after {
+                        left: 0;
+                    }
                 }
             }
         }
