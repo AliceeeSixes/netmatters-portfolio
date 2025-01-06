@@ -552,8 +552,6 @@ section.about-me {
         display: block; } }
   section.about-me:hover::after {
     width: 32vw; }
-  section.about-me:last-of-type {
-    margin-bottom: 250px; }
 
 section.about-me:nth-of-type(1)::after {
   background: linear-gradient(to left, #274a56, transparent), url() center;
