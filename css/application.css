@@ -37,11 +37,12 @@ body {
       flex-direction: row; } }
 
 main {
+  height: fit-content;
   min-height: 100vh;
   width: 100%;
   position: relative;
   background: #fbfcff;
-  overflow: hidden; }
+  overflow-x: hidden; }
   @media (min-width: 768px) {
     main {
       float: right;
@@ -514,6 +515,7 @@ section.hero {
     text-shadow: 0 0 2px #605856; }
 
 section.about-me {
+  height: fit-content;
   min-height: 40%;
   align-content: center;
   position: relative;

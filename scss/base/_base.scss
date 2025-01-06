@@ -27,18 +27,12 @@ body {
         display: flex;
         flex-direction: row;
     }
-
-
-
-
-
 }
 
 
 main {
-
-
     // Sizing properties
+    height: fit-content;
     min-height: 100vh;
     @media (min-width: $break-medium) {
         float: right;
@@ -53,7 +47,7 @@ main {
 
     background: $white;
 
-    overflow: hidden;
+    overflow-x: hidden;
 
 
 
