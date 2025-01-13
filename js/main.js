@@ -67,25 +67,103 @@ $(".contact__notif").on("click", "i", (event) => {
 
 });
 
+$(".contact__notif").hide();
+
 
 // Contact form validation
-function contactNotif(message) {
+function contactNotif(message, mood = "neutral") {
+
+    if (mood === "bad") {
+        $(".contact__notif").css("background","rgba(255, 0, 0, .5)")
+    } else if (mood === "good") {
+        $(".contact__notif").css("background","rgba(0, 255, 0, .5)")
+    } else {
+        $(".contact__notif").css("background","rgba(100, 100, 255, .5)")
+    }
+
     $(".contact__notif h3").text(message);
     $(".contact__notif").slideDown();
 }
 
+
 $(`input[type="submit"]`).on("click", (event) => {
+ 
+    event.preventDefault();
     let infoIsValid = true;
 
-    // Do checks
+    // Get inputs from fields
+    firstName = $("#fname").val();
+    lastName = $("#lname").val();
+    emailAddress = $("#email").val();
+    emailSubject = $("#subject").val();
+    emailMessage = $("#message").val();
 
+
+    // Do checks
+    var validator = $("#contact__form--form").validate({
+        // validation rules
+        rules: {
+            fname: {
+                required: true
+            },
+            lname: {
+                required: true,
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            subject: {
+                required: true
+            }
+        },
+
+        //validation messages
+        messages: {
+            fname: {
+                required: contactNotif("Form failed to send - first name is required","bad")
+            },
+            lname: {
+                required: contactNotif("Form failed to send - last name is required","bad")
+            },
+            email: {
+                required: contactNotif("Form failed to send - an email address is required","bad"),
+                email: contactNotif("Form failed to send - not a valid email address","bad")
+            },
+            subject: {
+                required: contactNotif("Form failed to send - a subject line is required","bad")
+            }
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo( element.parent() );
+          }
+    });
+
+    // firstName
+    if (validator.element("#fname") === false) {
+        infoIsValid = false;
+    }
+    if (validator.element("#lname") === false) {
+        infoIsValid = false;
+    }
+    if (validator.element("#email") === false) {
+        infoIsValid = false;
+    }
+    if (validator.element("#subject") === false) {
+        infoIsValid = false;
+    }
 
     // result
 
     if (infoIsValid) {
         //submit form
+        console.log("form allowed through");
+        contactNotif("Form successfully submitted", "good");
+
+        // add form submission once backend is implemented
     } else {
-        event.preventDefault;
+        console.log("form stopped")
+
     }
 
 });

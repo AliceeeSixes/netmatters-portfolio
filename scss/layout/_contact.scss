@@ -31,7 +31,7 @@
     border-radius: 5px;
     border: 2px solid $wenge;
 
-    background: rgb(255, 129, 129);
+    background: rgba(255, 0, 0, 0.5);
 
     .fa {
         position: absolute;
@@ -48,4 +48,17 @@
 
     }
 
+}
+
+label {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1.2em;
+    color: rgba(255, 0, 0, 0.5);
+
+}
+
+.input {
+    position: relative;
 }

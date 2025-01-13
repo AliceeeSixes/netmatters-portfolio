@@ -506,7 +506,7 @@ nav {
   height: 50px;
   border-radius: 5px;
   border: 2px solid #605856;
-  background: #ff8181; }
+  background: rgba(255, 0, 0, 0.5); }
   .contact__notif .fa {
     position: absolute;
     top: 3px;
@@ -518,6 +518,16 @@ nav {
     margin: auto;
     text-align: center;
     align-self: center; }
+
+label {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1.2em;
+  color: rgba(255, 0, 0, 0.5); }
+
+.input {
+  position: relative; }
 
 footer {
   height: 50px;
