@@ -12,7 +12,8 @@ $(".animsition").animsition({
 // Vertical nav toggle
 let sidebar = true;
 let navVerticalWidth = $("#nav__vertical").width();
-console.log(navVerticalWidth);
+
+
 function toggleSidebar() {
     if (sidebar === true) {
         //hide
@@ -31,6 +32,27 @@ function toggleSidebar() {
         $(".nav__vertical--toggle button").html(`<i class="fa fa-chevron-left"></i>`);
         console.log("shown");
         sidebar = true;
+    }
+    
+}
+
+// Horizontal nav toggle
+let topbar = true;
+
+function toggleTopbar() {
+    if (topbar === true) {
+        //hide
+        $(".nav__horizontal--button").css("display","none")
+        $(".nav__horizontal--toggle button").html(`<i class="fa fa-chevron-down"></i>`);
+        console.log("hidden");
+        topbar = false;
+    }
+    else {
+        //show
+        $(".nav__horizontal--button").css("display","block")
+        $(".nav__horizontal--toggle button").html(`<i class="fa fa-chevron-up"></i>`);
+        console.log("shown");
+        topbar = true;
     }
     
 }

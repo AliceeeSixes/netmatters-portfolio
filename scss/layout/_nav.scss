@@ -225,3 +225,25 @@ nav {
         width: 250px;
     }
 }
+
+.nav__horizontal--toggle {
+    transition: 0.3s ease;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    button {
+        margin: auto;
+        font-size: 20px;
+        background: none;
+        border: none;
+        &:hover {
+            color: $french-gray;
+        }
+    }
+}
+
