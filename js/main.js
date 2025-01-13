@@ -1,7 +1,7 @@
 $(".animsition").animsition({
     inClass: "fade-in",
     outClass: "fade-out",
-    linkElement: 'a',
+    linkElement: 'a:not([href^="#"])',
     inDuration: 400,
     outDuration: 600
 });

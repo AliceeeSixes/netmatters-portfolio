@@ -244,6 +244,7 @@ a.in-text {
   padding: 0;
   position: relative;
   height: 100vh;
+  font-size: 1.5em;
   display: flex; }
   @media (min-width: 1200px) {
     #banner {
@@ -280,8 +281,10 @@ a.in-text {
   #banner__inner h1,
   #banner__inner p {
     color: inherit;
-    animation: 1s ease 0s 1 fadeInSlide;
     cursor: default; }
+
+.page__arrow {
+  font-size: 20px; }
 
 nav {
   background: #fbfcff;
