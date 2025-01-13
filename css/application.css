@@ -37,6 +37,7 @@ body {
       flex-direction: row; } }
 
 main {
+  transition: 0.3s ease;
   height: fit-content;
   min-height: 100vh;
   width: 100%;
@@ -45,10 +46,14 @@ main {
   @media (min-width: 768px) {
     main {
       float: right;
-      margin-left: 250px; } }
+      margin-left: 250px;
+      padding-left: 50px; } }
   @media (min-width: 992px) {
     main {
       overflow-x: hidden; } }
+  @media (min-width: 1200px) {
+    main {
+      padding-left: 0; } }
 
 section {
   background: #fbfcff; }
@@ -114,6 +119,33 @@ a.in-text {
   background: #274a56; }
   .dark * {
     color: #fbfcff; }
+
+.nav__vertical--toggle {
+  transition: 0.3s ease;
+  display: none;
+  position: fixed;
+  background: #fbfcff;
+  border-right: 2px solid #605856;
+  z-index: 2;
+  margin-left: 250px;
+  width: 50px;
+  height: 100vh; }
+  .nav__vertical--toggle button {
+    background: #fbfcff;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    align-self: center;
+    display: block;
+    color: #605856;
+    border: none; }
+  @media (min-width: 768px) {
+    .nav__vertical--toggle {
+      display: flex; } }
+  @media (min-width: 1200px) {
+    .nav__vertical--toggle {
+      display: none; } }
 
 @media (min-width: 576px) {
   #projects {
@@ -257,6 +289,7 @@ nav {
   color: #605856; }
 
 #nav__vertical {
+  transition: 0.3s ease;
   position: fixed;
   display: none;
   float: left;
@@ -266,7 +299,11 @@ nav {
   @media (min-width: 768px) {
     #nav__vertical {
       display: block;
-      grid-area: nav; } }
+      grid-area: nav;
+      border-right: none; } }
+  @media (min-width: 1200px) {
+    #nav__vertical {
+      border-right: 3px solid #605856; } }
   #nav__vertical h1 {
     margin-top: 20px; }
   #nav__vertical .socials {
@@ -446,17 +483,20 @@ nav {
     text-wrap: wrap; }
 
 footer {
-  height: 50px; }
+  height: 50px;
+  position: relative; }
 
 .footer-inside {
   height: 50px;
-  width: 100%;
   text-align: center;
   color: #605856;
   position: absolute;
   bottom: 0;
   background: #fbfcff;
-  align-content: center; }
+  align-content: center;
+  left: 0;
+  right: 0;
+  margin-inline: auto; }
 
 section {
   color: #605856;

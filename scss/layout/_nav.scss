@@ -7,21 +7,27 @@ nav {
 }
 
 #nav__vertical {
+    transition: 0.3s ease;
 
     position: fixed;
     display: none;
     float: left;
     min-width: $nav__vertical--width;
     height: 100%;
-
+    
+    // Border
+    border-right: 3px solid $wenge;
 
     @media (min-width: $break-medium) {
         display: block;
         grid-area: nav;
+        border-right: none;
+    }
+    @media (min-width: $break-xl) {
+        border-right: 3px solid $wenge;
     }
 
-    // Border
-    border-right: 3px solid $wenge;
+
 
 
     // Spacing elements

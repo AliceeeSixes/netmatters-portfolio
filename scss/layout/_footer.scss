@@ -1,14 +1,20 @@
 footer {
     height: 50px;
+    position: relative;
+
 }
 
 .footer-inside {
     height: 50px;
-    width: 100%;
     text-align: center;
     color: $wenge;
     position: absolute;
     bottom: 0;
     background: $white;
     align-content: center;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+
+
 }
