@@ -1,5 +1,5 @@
 h1 span,
-p span {
+#banner p span {
   display: inline-block;
   transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
   transform: translate(20%, 100%);
@@ -9,7 +9,7 @@ p span {
   text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1);
 }
 h1 span:before,
-p span:before {
+#banner p span:before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -21,21 +21,21 @@ p span:before {
   transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
 }
 h1 span.row,
-p span.row {
+#banner p span.row {
   overflow: hidden;
   line-height: 0.9;
   display: block;
   transform: none;
 }
 h1 span.row:before,
-p span.row:before {
+#banner p span.row:before {
   display: none;
 }
 h1 .animate,
-p .animate {
+#banner p .animate {
   transform: translate(0, 0);
 }
 h1 .animate:before
-p .animate:before {
+#banner p .animate:before {
   transform: translateY(100%);
 }
