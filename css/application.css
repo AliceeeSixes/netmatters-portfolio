@@ -46,8 +46,7 @@ main {
   @media (min-width: 768px) {
     main {
       float: right;
-      margin-left: 250px;
-      padding-left: 50px; } }
+      margin-left: 250px; } }
   @media (min-width: 992px) {
     main {
       overflow-x: hidden; } }
@@ -119,33 +118,6 @@ a.in-text {
   background: #274a56; }
   .dark * {
     color: #fbfcff; }
-
-.nav__vertical--toggle {
-  transition: 0.3s ease;
-  display: none;
-  position: fixed;
-  background: #fbfcff;
-  border-right: 2px solid #605856;
-  z-index: 2;
-  margin-left: 250px;
-  width: 50px;
-  height: 100vh; }
-  .nav__vertical--toggle button {
-    background: #fbfcff;
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
-    margin: auto;
-    align-self: center;
-    display: block;
-    color: #605856;
-    border: none; }
-  @media (min-width: 768px) {
-    .nav__vertical--toggle {
-      display: flex; } }
-  @media (min-width: 1200px) {
-    .nav__vertical--toggle {
-      display: none; } }
 
 @media (min-width: 576px) {
   #projects {
@@ -244,7 +216,7 @@ a.in-text {
   padding: 0;
   position: relative;
   height: 100vh;
-  font-size: 1.5em;
+  font-size: 1.4em;
   display: flex; }
   @media (min-width: 1200px) {
     #banner {
@@ -302,11 +274,7 @@ nav {
   @media (min-width: 768px) {
     #nav__vertical {
       display: block;
-      grid-area: nav;
-      border-right: none; } }
-  @media (min-width: 1200px) {
-    #nav__vertical {
-      border-right: 3px solid #605856; } }
+      grid-area: nav; } }
   #nav__vertical h1 {
     margin-top: 20px; }
   #nav__vertical .socials {
@@ -464,6 +432,35 @@ nav {
     font-weight: 500; }
   .nav__horizontal--button-container {
     width: 250px; }
+
+.nav__vertical--toggle {
+  transition: 0.3s ease;
+  display: none;
+  position: fixed;
+  background: transparent;
+  z-index: 2;
+  margin-left: 250px;
+  width: 50px;
+  height: 100vh; }
+  .nav__vertical--toggle button {
+    background: transparent;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    align-self: center;
+    display: block;
+    color: #605856;
+    border: none;
+    border-radius: 50%;
+    background: #fbfcff;
+    box-shadow: 0 0 10px 0px #fbfcff; }
+  @media (min-width: 768px) {
+    .nav__vertical--toggle {
+      display: flex; } }
+  @media (min-width: 1200px) {
+    .nav__vertical--toggle {
+      display: none; } }
 
 .nav__horizontal--toggle {
   transition: 0.3s ease;

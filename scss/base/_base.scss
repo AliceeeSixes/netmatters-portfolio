@@ -38,7 +38,6 @@ main {
     @media (min-width: $break-medium) {
         float: right;
         margin-left: $nav__vertical--width;
-        padding-left: 50px;
     }
 
     width: 100%;
@@ -151,33 +150,3 @@ a.in-text {
     background: $charcoal;
 }
 
-.nav__vertical--toggle {
-    transition: 0.3s ease;
-    display: none;
-    position: fixed;
-    background: $white;
-    border-right: 2px solid $wenge;
-    z-index: 2;
-    margin-left: $nav__vertical--width;
-    width: 50px;
-    height: 100vh;
-    button {
-        background: $white;
-        font-size: 20px;
-        width: 30px;
-        height: 30px;
-        margin: auto;
-        align-self: center;
-        display: block;
-
-        //style
-        color: $wenge;
-        border: none;
-    }
-    @media (min-width: $break-medium) {
-        display: flex;
-    }
-    @media (min-width: $break-xl) {
-        display: none;
-    }
-}

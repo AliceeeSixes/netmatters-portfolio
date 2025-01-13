@@ -18,7 +18,7 @@ function toggleSidebar() {
     if (sidebar === true) {
         //hide
         $("main").css("margin-left","0");
-        $("#nav__vertical").css("left","-100%")
+        $("#nav__vertical").css("left","-100%");
         $(".nav__vertical--toggle").css("margin-left","0");
         $(".nav__vertical--toggle button").html(`<i class="fa fa-chevron-right"></i>`);
         console.log("hidden");

@@ -21,10 +21,6 @@ nav {
     @media (min-width: $break-medium) {
         display: block;
         grid-area: nav;
-        border-right: none;
-    }
-    @media (min-width: $break-xl) {
-        border-right: 3px solid $wenge;
     }
 
 
@@ -226,6 +222,42 @@ nav {
     }
 }
 
+.nav__vertical--toggle {
+    transition: 0.3s ease;
+    display: none;
+    position: fixed;
+    background: transparent;
+    z-index: 2;
+    margin-left: $nav__vertical--width;
+    width: 50px;
+    height: 100vh;
+    button {
+        background: transparent;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        margin: auto;
+        align-self: center;
+        display: block;
+
+        //style
+        color: $wenge;
+        border: none;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: 0 0 10px 0px $white;
+    }
+    @media (min-width: $break-medium) {
+        display: flex;
+    }
+    @media (min-width: $break-xl) {
+        display: none;
+    }
+}
+
+
+
+
 .nav__horizontal--toggle {
     transition: 0.3s ease;
     width: 100%;
@@ -235,6 +267,7 @@ nav {
     margin: auto;
     margin-top: 10px;
     margin-bottom: 20px;
+
 
     button {
         margin: auto;
