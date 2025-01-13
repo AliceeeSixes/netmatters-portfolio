@@ -479,16 +479,16 @@ nav {
     .nav__horizontal--toggle button:hover {
       color: #d0ccd0; }
 
-#contact {
+.contact__grid {
   display: grid;
   grid-auto-flow: row;
   margin: 50px 0;
   color: #605856; }
   @media (min-width: 576px) {
-    #contact {
+    .contact__grid {
       padding: 20px; } }
   @media (min-width: 992px) {
-    #contact {
+    .contact__grid {
       grid-template-columns: 1fr 1fr; } }
 
 .contact__description {
@@ -498,6 +498,26 @@ nav {
   .contact__description p {
     width: 100%;
     text-wrap: wrap; }
+
+.contact__notif {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid #605856;
+  background: #ff8181; }
+  .contact__notif .fa {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer; }
+  .contact__notif h3 {
+    margin: auto;
+    text-align: center;
+    align-self: center; }
 
 footer {
   height: 50px;

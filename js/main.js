@@ -56,3 +56,36 @@ function toggleTopbar() {
     }
     
 }
+
+
+// Contact form notification
+
+$(".contact__notif").on("click", "i", (event) => {
+
+    $(".contact__notif").slideUp();
+
+
+});
+
+
+// Contact form validation
+function contactNotif(message) {
+    $(".contact__notif h3").text(message);
+    $(".contact__notif").slideDown();
+}
+
+$(`input[type="submit"]`).on("click", (event) => {
+    let infoIsValid = true;
+
+    // Do checks
+
+
+    // result
+
+    if (infoIsValid) {
+        //submit form
+    } else {
+        event.preventDefault;
+    }
+
+});
