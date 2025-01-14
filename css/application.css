@@ -121,8 +121,8 @@ a.in-text {
 .dark {
   color: #fbfcff;
   background: #274a56; }
-  .dark * {
-    color: #fbfcff; }
+  .dark h1 {
+    color: inherit; }
 
 @media (min-width: 576px) {
   #projects {
@@ -906,19 +906,24 @@ body.darkmode .footer-inside,
 body.darkmode #contact,
 body.darkmode .contact__grid,
 body.darkmode h1,
-body.darkmode .nav__horizontal--toggle button {
+body.darkmode .nav__horizontal--toggle button,
+body.darkmode section.hero.dark {
   color: #fbfcff; }
-body.darkmode .dark * {
+body.darkmode .dark,
+body.darkmode section.hero,
+body.darkmode .dark h1 {
   color: #605856; }
 body.darkmode main,
 body.darkmode section,
 body.darkmode nav,
-body.darkmode .footer-inside {
+body.darkmode .footer-inside,
+body.darkmode section.hero.dark {
   background: #605856; }
 body.darkmode .dark,
 body.darkmode #nav__horizontal::after,
 body.darkmode input,
-body.darkmode textarea {
+body.darkmode textarea,
+body.darkmode section.hero {
   background: #fbfcff; }
 body.darkmode section.about-me:nth-of-type(1)::after {
   background: linear-gradient(to left, #fbfcff, transparent), url() center;

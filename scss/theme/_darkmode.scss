@@ -7,12 +7,16 @@ body.darkmode {
     #contact,
     .contact__grid,
     h1,
-    .nav__horizontal--toggle button {
+    .nav__horizontal--toggle button,
+    section.hero.dark {
         color: $white;
     }
 
-    .dark * {
+    .dark,
+    section.hero,
+    .dark h1 {
         color: $wenge;
+
     }
 
     // Background colouring
@@ -21,7 +25,8 @@ body.darkmode {
     main,
     section,
     nav,
-    .footer-inside {
+    .footer-inside,
+    section.hero.dark {
         background: $wenge;
     }
 
@@ -30,7 +35,8 @@ body.darkmode {
     .dark,
     #nav__horizontal::after,
     input,
-    textarea {
+    textarea,
+    section.hero {
         background: $white;
     }
 

@@ -149,9 +149,9 @@ a.in-text {
 
 .dark {
     color: $white;
-    * {
-        color: $white;
-    }
     background: $charcoal;
+    h1 {
+        color: inherit;
+    }
 }
 

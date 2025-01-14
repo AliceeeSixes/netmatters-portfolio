@@ -169,19 +169,41 @@ $(`input[type="submit"]`).on("click", (event) => {
 
 });
 
-let darkMode = false;
+// initialise dark mode
+let darkMode = localStorage.getItem("darkMode");
+console.log(darkMode);
+if (darkMode === null) {
+    darkMode = false;
+}
+if (darkMode == "true") {
+    darkMode = true;
+    $(".darkmode-toggle").html(`<i class="fa fa-sun"></i>`);
+    $("body").addClass("darkmode");
+}
+
+
+// dark mode functionality
+
 function toggleDarkMode() {
     if(darkMode === false) {
         //enable
         $(".darkmode-toggle").html(`<i class="fa fa-sun"></i>`);
         $("body").toggleClass("darkmode");
 
+        //change and save status to localstorage
         darkMode = true;
+        localStorage.setItem("darkMode",darkMode);
+        console.log(darkMode);
+        console.log(localStorage.getItem("darkMode"));
     } else {
         //disable
         $(".darkmode-toggle").html(`<i class="fa fa-moon"></i>`);
         $("body").toggleClass("darkmode");
 
+        //change and save status to localstorage
         darkMode = false;
+        localStorage.setItem("darkMode",darkMode);
+        console.log(darkMode);
+        console.log(localStorage.getItem("darkMode"));
     }
 }
