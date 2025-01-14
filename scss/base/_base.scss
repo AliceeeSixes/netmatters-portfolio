@@ -24,20 +24,24 @@ body {
 
     // Grid to reorganise the page in larger view sizes
     @media (min-width: $break-medium) {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-areas:
+        "nav toggle main";
+        grid-template-columns: $nav__vertical--width 0 1fr;
+        transition: 0.3s ease;
     }
 }
 
 
 main {
+    grid-area: main;
     transition: 0.3s ease;
     // Sizing properties
     height: fit-content;
     min-height: 100vh;
+    margin-left: 0;
     @media (min-width: $break-medium) {
         float: right;
-        margin-left: $nav__vertical--width;
     }
 
     width: 100%;
@@ -55,7 +59,7 @@ main {
         padding-left: 0;
     }
 
-
+    outline: 2px solid $wenge;
 
 }
 

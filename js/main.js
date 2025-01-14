@@ -17,17 +17,15 @@ let navVerticalWidth = $("#nav__vertical").width();
 function toggleSidebar() {
     if (sidebar === true) {
         //hide
-        $("main").css("margin-left","0");
-        $(".nav__vertical--toggle").css("margin-left","0");
         $(".nav__vertical--toggle button").html(`<i class="fa fa-chevron-right"></i>`);
+        $("body").css("grid-template-columns", "0 0 1fr");
         console.log("hidden");
         sidebar = false;
     }
     else {
         //show
-        $("main").css("margin-left",navVerticalWidth);
-        $(".nav__vertical--toggle").css("margin-left",navVerticalWidth);   
         $(".nav__vertical--toggle button").html(`<i class="fa fa-chevron-left"></i>`);
+        $("body").css("grid-template-columns", "250px 0 1fr");
         console.log("shown");
         sidebar = true;
     }

@@ -51,4 +51,8 @@
 
 .page__arrow {
     font-size: 20px;
+
+    @media (min-width: $break-xl) {
+        display: none;
+    }
 }
