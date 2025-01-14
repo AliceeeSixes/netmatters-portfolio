@@ -7,6 +7,7 @@ $(".animsition").animsition({
 });
 
 
+$(".textillate").textillate();
 
 
 // Vertical nav toggle
