@@ -1,7 +1,7 @@
 $(".animsition").animsition({
     inClass: "fade-in",
     outClass: "fade-out",
-    linkElement: 'a:not([href^="#"])',
+    linkElement: 'a:not([href^="#"]):not([target="_blank"])',
     inDuration: 400,
     outDuration: 600
 });
@@ -42,6 +42,7 @@ function toggleTopbar() {
         $(".nav__horizontal--button").css("display","none");
         $(".nav__horizontal--pfp").css("display","none");
         $("#nav__horizontal").css("padding-top","0");
+        $(".nav__horizontal-row").css("display","none");
         $(".nav__horizontal--toggle button").html(`<i class="fa fa-chevron-down"></i>`);
         console.log("hidden");
         topbar = false;
@@ -51,6 +52,7 @@ function toggleTopbar() {
         $(".nav__horizontal--button").css("display","block");
         $(".nav__horizontal--pfp").css("display","block");
         $("#nav__horizontal").css("padding-top","80px");
+        $(".nav__horizontal-row").css("display","block");
         $(".nav__horizontal--toggle button").html(`<i class="fa fa-chevron-up"></i>`);
         console.log("shown");
         topbar = true;
@@ -177,8 +179,10 @@ if (darkMode === null) {
 }
 if (darkMode == "true") {
     darkMode = true;
-    $(".darkmode-toggle").html(`<i class="fa fa-sun"></i>`);
     $("body").addClass("darkmode");
+    $("span.darkmode-text").text("Dark Mode: On");
+} else {
+    $("body").removeClass("darkmode")
 }
 
 
@@ -187,18 +191,20 @@ if (darkMode == "true") {
 function toggleDarkMode() {
     if(darkMode === false) {
         //enable
-        $(".darkmode-toggle").html(`<i class="fa fa-sun"></i>`);
-        $("body").toggleClass("darkmode");
+        $("body").addClass("darkmode");
+        $("span.darkmode-text").text("Dark Mode: On");
 
         //change and save status to localstorage
         darkMode = true;
         localStorage.setItem("darkMode",darkMode);
         console.log(darkMode);
         console.log(localStorage.getItem("darkMode"));
+        
     } else {
         //disable
-        $(".darkmode-toggle").html(`<i class="fa fa-moon"></i>`);
-        $("body").toggleClass("darkmode");
+        $("body").removeClass("darkmode")
+        $("span.darkmode-text").text("Dark Mode: Off");
+
 
         //change and save status to localstorage
         darkMode = false;

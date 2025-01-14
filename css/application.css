@@ -521,6 +521,9 @@ nav {
   .nav__horizontal--pfp a:hover::before {
     transform: rotate(180deg); }
 
+.nav__horizontal-row {
+  width: 100%; }
+
 .contact__grid {
   display: grid;
   grid-auto-flow: row;
@@ -805,24 +808,43 @@ section[class^="slant-"] {
   border: none; }
 
 .darkmode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 5;
-  width: 25px;
-  height: 25px;
-  align-content: center;
-  text-align: center;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  border-radius: 5px 0 5px 0;
-  background: #d0ccd0;
+  display: block;
+  border: none;
+  background: #fbfcff;
   color: #605856;
-  border: 2px solid #605856; }
-  .darkmode-toggle i {
-    margin: auto;
+  font-size: 1em;
+  margin: auto;
+  text-align: center;
+  width: fit-content;
+  position: relative; }
+  .darkmode-toggle span.toggle {
+    display: block;
+    position: relative;
+    background-color: #605856;
+    background-clip: text;
+    margin: 0;
+    padding: 0;
+    cursor: pointer; }
+    .darkmode-toggle span.toggle i {
+      color: transparent; }
+    .darkmode-toggle span.toggle:hover, .darkmode-toggle span.toggle:focus-within {
+      background-color: #74d1db; }
+  .darkmode-toggle::after {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #605856;
+    left: 0;
+    bottom: -5px; }
+  .darkmode-toggle span.darkmode-text {
+    display: block;
+    margin: 0;
     padding: 0; }
+
+.nav__horizontal-row .darkmode-toggle::after {
+  background: transparent; }
 
 form {
   height: fit-content;
@@ -907,24 +929,32 @@ body.darkmode #contact,
 body.darkmode .contact__grid,
 body.darkmode h1,
 body.darkmode .nav__horizontal--toggle button,
-body.darkmode section.hero.dark {
+body.darkmode section.hero.dark,
+body.darkmode .darkmode-toggle {
   color: #fbfcff; }
 body.darkmode .dark,
 body.darkmode section.hero,
 body.darkmode .dark h1 {
   color: #605856; }
+body.darkmode .nav__horizontal--button:hover, body.darkmode .nav__horizontal--button:focus-within,
+body.darkmode .nav__vertical--button:hover,
+body.darkmode .nav__vertical--button:focus-within {
+  color: #d0ccd0; }
 body.darkmode main,
 body.darkmode section,
 body.darkmode nav,
 body.darkmode .footer-inside,
-body.darkmode section.hero.dark {
-  background: #605856; }
+body.darkmode section.hero.dark,
+body.darkmode .darkmode-toggle {
+  background-color: #605856; }
 body.darkmode .dark,
 body.darkmode #nav__horizontal::after,
 body.darkmode input,
 body.darkmode textarea,
-body.darkmode section.hero {
-  background: #fbfcff; }
+body.darkmode section.hero,
+body.darkmode .darkmode-toggle span.toggle,
+body.darkmode .darkmode-toggle::after {
+  background-color: #fbfcff; }
 body.darkmode section.about-me:nth-of-type(1)::after {
   background: linear-gradient(to left, #fbfcff, transparent), url() center;
   background-size: cover; }
@@ -938,7 +968,7 @@ body.darkmode main {
   outline: 2px solid #fbfcff; }
 body.darkmode #nav__vertical .socials {
   border-top: 1px solid #fbfcff; }
-body.darkmode .darkmode-toggle {
-  box-shadow: 0 0 5px #fbfcff; }
+body.darkmode .darkmode-toggle span.toggle:hover, body.darkmode .darkmode-toggle span.toggle:focus-within {
+  background-color: #74d1db; }
 
 /*# sourceMappingURL=application.css.map */

@@ -8,7 +8,8 @@ body.darkmode {
     .contact__grid,
     h1,
     .nav__horizontal--toggle button,
-    section.hero.dark {
+    section.hero.dark,
+    .darkmode-toggle {
         color: $white;
     }
 
@@ -19,6 +20,14 @@ body.darkmode {
 
     }
 
+    .nav__horizontal--button,
+    .nav__vertical--button {
+        &:hover,
+        &:focus-within {
+            color: $french-gray;
+        }
+    }
+
     // Background colouring
 
 
@@ -26,8 +35,9 @@ body.darkmode {
     section,
     nav,
     .footer-inside,
-    section.hero.dark {
-        background: $wenge;
+    section.hero.dark,
+    .darkmode-toggle {
+        background-color: $wenge;
     }
 
 
@@ -36,8 +46,10 @@ body.darkmode {
     #nav__horizontal::after,
     input,
     textarea,
-    section.hero {
-        background: $white;
+    section.hero,
+    .darkmode-toggle span.toggle,
+    .darkmode-toggle::after {
+        background-color: $white;
     }
 
 
@@ -67,7 +79,13 @@ body.darkmode {
     }
 
     // Shadows
-    .darkmode-toggle {
-        box-shadow: 0 0 5px $white;
+
+
+    // Hovers
+    .darkmode-toggle span.toggle{
+        &:hover,
+        &:focus-within {
+            background-color: $viking;
+        }
     }
 }
