@@ -21,10 +21,6 @@
   outline: none;
   scroll-behavior: smooth; }
 
-html {
-  scroll-snap-type: y proximity;
-  scroll-behavior: smooth; }
-
 body {
   width: 100%;
   height: 100%;
@@ -270,6 +266,7 @@ nav {
   float: left;
   min-width: 250px;
   height: 100%;
+  z-index: 0;
   border-right: 3px solid #605856; }
   @media (min-width: 768px) {
     #nav__vertical {
@@ -454,7 +451,8 @@ nav {
     border: none;
     border-radius: 50%;
     background: #fbfcff;
-    box-shadow: 0 0 10px 0px #fbfcff; }
+    box-shadow: 0 0 10px 0px #fbfcff;
+    cursor: pointer; }
   @media (min-width: 768px) {
     .nav__vertical--toggle {
       display: flex; } }

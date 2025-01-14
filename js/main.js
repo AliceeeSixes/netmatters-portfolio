@@ -18,7 +18,6 @@ function toggleSidebar() {
     if (sidebar === true) {
         //hide
         $("main").css("margin-left","0");
-        $("#nav__vertical").css("left","-100%");
         $(".nav__vertical--toggle").css("margin-left","0");
         $(".nav__vertical--toggle button").html(`<i class="fa fa-chevron-right"></i>`);
         console.log("hidden");
@@ -27,7 +26,6 @@ function toggleSidebar() {
     else {
         //show
         $("main").css("margin-left",navVerticalWidth);
-        $("#nav__vertical").css("left","0")
         $(".nav__vertical--toggle").css("margin-left",navVerticalWidth);   
         $(".nav__vertical--toggle button").html(`<i class="fa fa-chevron-left"></i>`);
         console.log("shown");

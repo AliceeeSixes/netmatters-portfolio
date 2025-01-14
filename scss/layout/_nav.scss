@@ -8,13 +8,12 @@ nav {
 
 #nav__vertical {
     transition: 0.3s ease;
-
     position: fixed;
     display: none;
     float: left;
     min-width: $nav__vertical--width;
     height: 100%;
-    
+    z-index: 0;
     // Border
     border-right: 3px solid $wenge;
 
@@ -246,6 +245,7 @@ nav {
         border-radius: 50%;
         background: $white;
         box-shadow: 0 0 10px 0px $white;
+        cursor: pointer;
     }
     @media (min-width: $break-medium) {
         display: flex;
