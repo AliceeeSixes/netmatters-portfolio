@@ -1,0 +1,23 @@
+.darkmode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+
+    width: 25px;
+    height: 25px;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    i {
+        margin: auto;
+        padding: 0;
+    }
+    border-radius: 5px 0 5px 0;
+    background: $french-gray;
+    color: $wenge;
+
+    border: 2px solid $wenge;
+}

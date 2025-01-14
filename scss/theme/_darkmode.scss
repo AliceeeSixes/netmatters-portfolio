@@ -1,0 +1,67 @@
+body.darkmode {
+    // Text colouring
+    section,
+    .section__title,
+    nav,
+    .footer-inside,
+    #contact,
+    .contact__grid,
+    h1,
+    .nav__horizontal--toggle button {
+        color: $white;
+    }
+
+    .dark * {
+        color: $wenge;
+    }
+
+    // Background colouring
+
+
+    main,
+    section,
+    nav,
+    .footer-inside {
+        background: $wenge;
+    }
+
+
+
+    .dark,
+    #nav__horizontal::after,
+    input,
+    textarea {
+        background: $white;
+    }
+
+
+    @each $number, $image in $about-me--images {
+        section.about-me:nth-of-type(#{$number})::after {
+            @if $number % 2 == 0 {
+                background: linear-gradient(to right, $wenge, transparent), url(#{$image}) center;
+                background-size: cover;
+            }
+            @else {
+                background: linear-gradient(to left, $white, transparent), url(#{$image}) center;
+                background-size: cover;
+            }
+        }
+    }
+
+
+
+
+    // Borders
+    main {
+        outline: 2px solid $white;
+    }
+
+    #nav__vertical .socials {
+        border-top: 1px solid $white;
+    }
+
+    // Shadows
+    .darkmode-toggle {
+        box-shadow: 0 0 5px $white;
+    }
+}

@@ -281,6 +281,8 @@ nav {
         font-size: 20px;
         background: none;
         border: none;
+        color: $wenge;
+        cursor: pointer;
         &:hover {
             color: $french-gray;
         }

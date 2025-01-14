@@ -168,3 +168,20 @@ $(`input[type="submit"]`).on("click", (event) => {
     }
 
 });
+
+let darkMode = false;
+function toggleDarkMode() {
+    if(darkMode === false) {
+        //enable
+        $(".darkmode-toggle").html(`<i class="fa fa-sun"></i>`);
+        $("body").toggleClass("darkmode");
+
+        darkMode = true;
+    } else {
+        //disable
+        $(".darkmode-toggle").html(`<i class="fa fa-moon"></i>`);
+        $("body").toggleClass("darkmode");
+
+        darkMode = false;
+    }
+}

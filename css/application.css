@@ -19,7 +19,8 @@
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   outline: none;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease; }
 
 html.scroll-snap {
   scroll-snap-type: y proximity;
@@ -489,7 +490,9 @@ nav {
     margin: auto;
     font-size: 20px;
     background: none;
-    border: none; }
+    border: none;
+    color: #605856;
+    cursor: pointer; }
     .nav__horizontal--toggle button:hover {
       color: #d0ccd0; }
 
@@ -801,6 +804,26 @@ section.about-me:nth-of-type(5) * {
 section[class^="slant-"] {
   border: none; }
 
+.darkmode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  width: 25px;
+  height: 25px;
+  align-content: center;
+  text-align: center;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px 0 5px 0;
+  background: #d0ccd0;
+  color: #605856;
+  border: 2px solid #605856; }
+  .darkmode-toggle i {
+    margin: auto;
+    padding: 0; }
+
 form {
   height: fit-content;
   border-radius: 5px 0 5px 0;
@@ -875,5 +898,42 @@ textarea {
       grid-column: span 2; } }
   .submit:hover input, .submit:focus-within input {
     background-color: #74d1db; }
+
+body.darkmode section,
+body.darkmode .section__title,
+body.darkmode nav,
+body.darkmode .footer-inside,
+body.darkmode #contact,
+body.darkmode .contact__grid,
+body.darkmode h1,
+body.darkmode .nav__horizontal--toggle button {
+  color: #fbfcff; }
+body.darkmode .dark * {
+  color: #605856; }
+body.darkmode main,
+body.darkmode section,
+body.darkmode nav,
+body.darkmode .footer-inside {
+  background: #605856; }
+body.darkmode .dark,
+body.darkmode #nav__horizontal::after,
+body.darkmode input,
+body.darkmode textarea {
+  background: #fbfcff; }
+body.darkmode section.about-me:nth-of-type(1)::after {
+  background: linear-gradient(to left, #fbfcff, transparent), url() center;
+  background-size: cover; }
+body.darkmode section.about-me:nth-of-type(2)::after {
+  background: linear-gradient(to right, #605856, transparent), url(../img/code_screenshot.png) center;
+  background-size: cover; }
+body.darkmode section.about-me:nth-of-type(3)::after {
+  background: linear-gradient(to left, #fbfcff, transparent), url(../img/chess.png) center;
+  background-size: cover; }
+body.darkmode main {
+  outline: 2px solid #fbfcff; }
+body.darkmode #nav__vertical .socials {
+  border-top: 1px solid #fbfcff; }
+body.darkmode .darkmode-toggle {
+  box-shadow: 0 0 5px #fbfcff; }
 
 /*# sourceMappingURL=application.css.map */
