@@ -87,7 +87,9 @@ nav {
     justify-content: center;
     position: sticky;
     top: 0;
+    padding-top: 80px;
     
+    box-shadow: 0 0 10px black;
 
 
     &::after {
@@ -283,5 +285,48 @@ nav {
             color: $french-gray;
         }
     }
+}
+
+.nav__horizontal--pfp {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    top: 10px;
+
+    img {
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid transparent;
+
+
+
+    }
+
+
+
+    a {
+
+        &::before {
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: conic-gradient(from 225deg, $wenge, $white 50%, $viking 50%, $white);
+            position: absolute;
+            content: "";
+            border-radius: 50%;
+            top: 0;
+            transition: 0.3s ease;
+            z-index: -1;
+        }
+        &:hover {
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+    
 }
 

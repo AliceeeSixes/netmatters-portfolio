@@ -21,6 +21,10 @@
   outline: none;
   scroll-behavior: smooth; }
 
+html.scroll-snap {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth; }
+
 body {
   width: 100%;
   height: 100%;
@@ -335,7 +339,9 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   position: sticky;
-  top: 0; }
+  top: 0;
+  padding-top: 80px;
+  box-shadow: 0 0 10px black; }
   @media (min-width: 768px) {
     #nav__horizontal {
       display: none; } }
@@ -486,6 +492,31 @@ nav {
     border: none; }
     .nav__horizontal--toggle button:hover {
       color: #d0ccd0; }
+
+.nav__horizontal--pfp {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background: transparent;
+  position: absolute;
+  top: 10px; }
+  .nav__horizontal--pfp img {
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid transparent; }
+  .nav__horizontal--pfp a::before {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from 225deg, #605856, #fbfcff 50%, #74d1db 50%, #fbfcff);
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    top: 0;
+    transition: 0.3s ease;
+    z-index: -1; }
+  .nav__horizontal--pfp a:hover::before {
+    transform: rotate(180deg); }
 
 .contact__grid {
   display: grid;

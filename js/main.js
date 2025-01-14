@@ -39,14 +39,18 @@ let topbar = true;
 function toggleTopbar() {
     if (topbar === true) {
         //hide
-        $(".nav__horizontal--button").css("display","none")
+        $(".nav__horizontal--button").css("display","none");
+        $(".nav__horizontal--pfp").css("display","none");
+        $("#nav__horizontal").css("padding-top","0");
         $(".nav__horizontal--toggle button").html(`<i class="fa fa-chevron-down"></i>`);
         console.log("hidden");
         topbar = false;
     }
     else {
         //show
-        $(".nav__horizontal--button").css("display","block")
+        $(".nav__horizontal--button").css("display","block");
+        $(".nav__horizontal--pfp").css("display","block");
+        $("#nav__horizontal").css("padding-top","80px");
         $(".nav__horizontal--toggle button").html(`<i class="fa fa-chevron-up"></i>`);
         console.log("shown");
         topbar = true;

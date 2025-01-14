@@ -6,12 +6,12 @@
 }
 
 
-html {
+html.scroll-snap {
 
     // Scroll snap
 
-    // scroll-snap-type: y proximity;
-    // scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
 }
 
 body {
