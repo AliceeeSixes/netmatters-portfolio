@@ -192,11 +192,10 @@ nav {
     display: block;
     font-size: 1.5em;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
-    &::after,
-    &::before {
+    &::after {
         transition: 0.3s ease;
         content: "";
         display: block;
