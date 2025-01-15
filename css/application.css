@@ -69,9 +69,8 @@ h1 {
 
 .section__title {
   padding: 20px;
-  font-weight: 500;
-  font-size: 2.5em;
-  text-decoration: underline; }
+  font-weight: 400;
+  font-size: 2.5em; }
   @media (min-width: 768px) {
     .section__title {
       margin: 20px auto 20px auto; } }
@@ -904,9 +903,7 @@ textarea {
   border: 2px solid #605856; }
   input:focus-within,
   textarea:focus-within {
-    background: #dcd9dc;
-    border-radius: 5px 0 5px 0;
-    border: 2px solid #605856; }
+    background: #dcd9dc; }
 
 textarea {
   overflow: auto; }
@@ -933,34 +930,41 @@ body.darkmode .contact__grid,
 body.darkmode h1,
 body.darkmode .nav__horizontal--toggle button,
 body.darkmode section.hero.dark,
-body.darkmode .darkmode-toggle {
+body.darkmode .darkmode-toggle,
+body.darkmode .projects__card,
+body.darkmode input,
+body.darkmode textarea {
   color: #fbfcff; }
 body.darkmode .dark,
 body.darkmode section.hero,
 body.darkmode .dark h1 {
-  color: #605856; }
+  color: #404040; }
 body.darkmode .nav__horizontal--button:hover, body.darkmode .nav__horizontal--button:focus-within,
 body.darkmode .nav__vertical--button:hover,
 body.darkmode .nav__vertical--button:focus-within {
-  color: #d0ccd0; }
+  color: #fbfcff; }
 body.darkmode main,
 body.darkmode section,
 body.darkmode nav,
 body.darkmode .footer-inside,
 body.darkmode section.hero.dark,
 body.darkmode .darkmode-toggle {
-  background-color: #605856; }
+  background-color: #404040; }
 body.darkmode .dark,
 body.darkmode #nav__horizontal::after,
 body.darkmode section.hero,
 body.darkmode .darkmode-toggle span.toggle,
 body.darkmode .darkmode-toggle::after {
   background-color: #fbfcff; }
+body.darkmode .projects__card,
+body.darkmode input,
+body.darkmode textarea {
+  background-color: #5c5c5c; }
 body.darkmode section.about-me:nth-of-type(1)::after {
   background: linear-gradient(to left, #fbfcff, transparent), url() center;
   background-size: cover; }
 body.darkmode section.about-me:nth-of-type(2)::after {
-  background: linear-gradient(to right, #605856, transparent), url(../img/code_screenshot.png) center;
+  background: linear-gradient(to right, #404040, transparent), url(../img/code_screenshot.png) center;
   background-size: cover; }
 body.darkmode section.about-me:nth-of-type(3)::after {
   background: linear-gradient(to left, #fbfcff, transparent), url(../img/chess.png) center;
@@ -969,7 +973,18 @@ body.darkmode main {
   outline: 2px solid #fbfcff; }
 body.darkmode #nav__vertical .socials {
   border-top: 1px solid #fbfcff; }
+body.darkmode .projects__card {
+  border: 2px solid #5c5c5c; }
+body.darkmode input,
+body.darkmode textarea {
+  border: 2px solid #333; }
+body.darkmode .projects__card:hover {
+  box-shadow: 0 10px 5px #333; }
 body.darkmode .darkmode-toggle span.toggle:hover, body.darkmode .darkmode-toggle span.toggle:focus-within {
   background-color: #74d1db; }
+body.darkmode input:focus-within,
+body.darkmode textarea:focus-within {
+  background: dimgray;
+  border: 2px solid #74d1db; }
 
 /*# sourceMappingURL=application.css.map */

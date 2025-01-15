@@ -68,8 +68,6 @@ textarea {
     border: 2px solid $wenge;
     &:focus-within {
         background: lighten($french-gray, 5%);
-        border-radius: 5px 0 5px 0;
-        border: 2px solid $wenge;
     }
 }
 

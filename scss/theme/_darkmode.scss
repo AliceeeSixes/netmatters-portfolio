@@ -9,14 +9,17 @@ body.darkmode {
     h1,
     .nav__horizontal--toggle button,
     section.hero.dark,
-    .darkmode-toggle {
+    .darkmode-toggle,
+    .projects__card,
+    input,
+    textarea {
         color: $white;
     }
 
     .dark,
     section.hero,
     .dark h1 {
-        color: $wenge;
+        color: $tundora;
 
     }
 
@@ -24,7 +27,7 @@ body.darkmode {
     .nav__vertical--button {
         &:hover,
         &:focus-within {
-            color: $french-gray;
+            color: $white;
         }
     }
 
@@ -37,7 +40,7 @@ body.darkmode {
     .footer-inside,
     section.hero.dark,
     .darkmode-toggle {
-        background-color: $wenge;
+        background-color: $tundora;
     }
 
 
@@ -50,11 +53,17 @@ body.darkmode {
         background-color: $white;
     }
 
+    .projects__card,
+    input,
+    textarea {
+        background-color: $scorpion;
+    }
+
 
     @each $number, $image in $about-me--images {
         section.about-me:nth-of-type(#{$number})::after {
             @if $number % 2 == 0 {
-                background: linear-gradient(to right, $wenge, transparent), url(#{$image}) center;
+                background: linear-gradient(to right, $tundora, transparent), url(#{$image}) center;
                 background-size: cover;
             }
             @else {
@@ -76,14 +85,33 @@ body.darkmode {
         border-top: 1px solid $white;
     }
 
+    .projects__card {
+        border: 2px solid $scorpion;
+    }
+
+    input,
+    textarea {
+        border: 2px solid $mine-shaft;
+    }
+
     // Shadows
+    .projects__card:hover {
+        box-shadow: 0 10px 5px $mine-shaft;
+    }
 
 
-    // Hovers
+    // Hovers + focus
     .darkmode-toggle span.toggle{
         &:hover,
         &:focus-within {
             background-color: $viking;
         }
+    }
+
+
+    input:focus-within,
+    textarea:focus-within {
+        background: lighten($scorpion, 5%);
+        border: 2px solid $viking;
     }
 }
