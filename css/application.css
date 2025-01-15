@@ -124,6 +124,8 @@ a.in-text {
     color: inherit; }
 
 #projects {
+  width: 90%;
+  margin: auto;
   padding: 20px; }
   #projects h1 {
     margin-bottom: 20px; }
