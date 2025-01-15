@@ -137,7 +137,7 @@ section.about-me {
             background-size: cover;
         }
         @else {
-            background: linear-gradient(to left, $charcoal, transparent), url(#{$image}) center;
+            background: linear-gradient(to left, $wenge, transparent), url(#{$image}) center;
             background-size: cover;
         }
     }

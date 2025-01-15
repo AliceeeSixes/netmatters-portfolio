@@ -182,7 +182,9 @@ if (darkMode == "true") {
     $("body").addClass("darkmode");
     $("span.darkmode-text").text("Dark Mode: On");
 } else {
+    darkMode = false;
     $("body").removeClass("darkmode")
+    $("span.darkmode-text").text("Dark Mode: Off");
 }
 
 
