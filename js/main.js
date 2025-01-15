@@ -159,11 +159,18 @@ $(`input[type="submit"]`).on("click", (event) => {
     // result
 
     if (infoIsValid) {
-        //submit form
+        // submit form
         console.log("form allowed through");
         contactNotif("Form successfully submitted", "good");
 
+
+
         // add form submission once backend is implemented
+
+
+        // reset form
+        $("input").val("");
+        $("textarea").val("");
     } else {
         console.log("form stopped")
 
