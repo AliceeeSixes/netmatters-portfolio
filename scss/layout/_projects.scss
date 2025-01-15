@@ -1,8 +1,8 @@
 
 #projects {
-    @media (min-width: $break-small) {
-        padding: 20px;
-    }
+
+    padding: 20px;
+
 
     h1 {
         margin-bottom: 20px;
@@ -14,11 +14,9 @@
 #projects__grid {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     
     justify-content: space-around;
-    @media (min-width: $break-small) {
-        gap: 20px;
-    }
 
 }
 

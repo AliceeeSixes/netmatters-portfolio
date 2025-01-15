@@ -123,19 +123,16 @@ a.in-text {
   .dark h1 {
     color: inherit; }
 
-@media (min-width: 576px) {
-  #projects {
-    padding: 20px; } }
-#projects h1 {
-  margin-bottom: 20px; }
+#projects {
+  padding: 20px; }
+  #projects h1 {
+    margin-bottom: 20px; }
 
 #projects__grid {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-around; }
-  @media (min-width: 576px) {
-    #projects__grid {
-      gap: 20px; } }
 
 .projects__card {
   height: 400px;
