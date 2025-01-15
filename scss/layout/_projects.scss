@@ -37,6 +37,7 @@
         min-width: 400px;
         max-width: 600px;
         flex: 1 1 auto;
+        border-radius: 10px 0 10px 0;
     }
     @media (min-width: $break-xl) {
         flex-basis: 25%;
@@ -44,13 +45,15 @@
 
 
     // Styling
-    background: $charcoal;
+    background: $french-gray;
     transition: 0.3s ease;
-    color: $white;
+    color: $wenge;
+    
 
 
     // corners
-    border-radius: 10px 0 10px 0;
+    
+    border: 2px solid $wenge;
 
 
     // hover lift
@@ -75,7 +78,6 @@
 
 .projects__card--img-container {
     height: 203px;
-    border-radius: 10px 0 10px 0;
     border: 3px transparent;
     margin: 0;
     padding: 0;
@@ -93,6 +95,10 @@
         background: $viking;
 
     }
+    @media (min-width: $break-medium) {
+        border-radius: 10px 0 10px 0;
+    }
+
 
 }
 .projects__card--img {
@@ -107,7 +113,9 @@
 
 
     // borders
-    border-radius: 10px 0 10px 0;
+    @media (min-width: $break-medium) {
+        border-radius: 10px 0 10px 0;
+    }
 
 }
 
@@ -117,6 +125,7 @@
 }
 
 .projects__card--desc {
+    
 
     @include text-overflow-ellipsis;
 

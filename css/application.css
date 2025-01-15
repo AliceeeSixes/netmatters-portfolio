@@ -143,15 +143,16 @@ a.in-text {
   flex: 0 1 auto;
   margin: 20px 0;
   padding: 0;
-  background: #274a56;
+  background: #d0ccd0;
   transition: 0.3s ease;
-  color: #fbfcff;
-  border-radius: 10px 0 10px 0; }
+  color: #605856;
+  border: 2px solid #605856; }
   @media (min-width: 768px) {
     .projects__card {
       min-width: 400px;
       max-width: 600px;
-      flex: 1 1 auto; } }
+      flex: 1 1 auto;
+      border-radius: 10px 0 10px 0; } }
   @media (min-width: 1200px) {
     .projects__card {
       flex-basis: 25%; } }
@@ -168,7 +169,6 @@ a.in-text {
 
 .projects__card--img-container {
   height: 203px;
-  border-radius: 10px 0 10px 0;
   border: 3px transparent;
   margin: 0;
   padding: 0;
@@ -184,6 +184,9 @@ a.in-text {
     height: 100%;
     opacity: 0%;
     background: #74d1db; }
+  @media (min-width: 768px) {
+    .projects__card--img-container {
+      border-radius: 10px 0 10px 0; } }
 
 .projects__card--img {
   position: relative;
@@ -193,8 +196,10 @@ a.in-text {
   height: 200px;
   border: none;
   background: url(../img/NM-remake.png);
-  background-size: cover;
-  border-radius: 10px 0 10px 0; }
+  background-size: cover; }
+  @media (min-width: 768px) {
+    .projects__card--img {
+      border-radius: 10px 0 10px 0; } }
 
 .projects__card--title {
   padding-left: 1em;
@@ -473,9 +478,6 @@ nav {
   @media (min-width: 768px) {
     .nav__vertical--toggle {
       display: flex; } }
-  @media (min-width: 1200px) {
-    .nav__vertical--toggle {
-      display: none; } }
 
 .nav__horizontal--toggle {
   transition: 0.3s ease;
@@ -527,8 +529,9 @@ nav {
 .contact__grid {
   display: grid;
   grid-auto-flow: row;
-  margin: 50px 0;
-  color: #605856; }
+  margin: 50px auto;
+  color: #605856;
+  width: 90%; }
   @media (min-width: 576px) {
     .contact__grid {
       padding: 20px; } }
@@ -949,8 +952,6 @@ body.darkmode .darkmode-toggle {
   background-color: #605856; }
 body.darkmode .dark,
 body.darkmode #nav__horizontal::after,
-body.darkmode input,
-body.darkmode textarea,
 body.darkmode section.hero,
 body.darkmode .darkmode-toggle span.toggle,
 body.darkmode .darkmode-toggle::after {

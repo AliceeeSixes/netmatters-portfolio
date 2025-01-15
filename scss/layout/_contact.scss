@@ -1,8 +1,9 @@
 .contact__grid {
     display: grid;
     grid-auto-flow: row;
-    margin: 50px 0;
+    margin: 50px auto;
     color: $wenge;
+    width: 90%;
     @media (min-width: $break-small) {
         padding: 20px;
     }
