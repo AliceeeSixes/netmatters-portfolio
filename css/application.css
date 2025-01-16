@@ -939,6 +939,9 @@ body.darkmode .nav__horizontal--button:hover, body.darkmode .nav__horizontal--bu
 body.darkmode .nav__vertical--button:hover,
 body.darkmode .nav__vertical--button:focus-within {
   color: #fbfcff; }
+body.darkmode input::placeholder,
+body.darkmode textarea::placeholder {
+  color: #d0ccd0; }
 body.darkmode main,
 body.darkmode section,
 body.darkmode nav,
