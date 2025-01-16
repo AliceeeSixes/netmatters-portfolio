@@ -81,18 +81,30 @@ function toggleTopbar() {
 
 
 // Toggle top nav on scroll
-$(window).on("mousewheel",(event) => {
-    if (event.originalEvent.wheelDelta > 0) {
-        // Up Scroll
+// $(window).on("mousewheel",(event) => {
+//     if (event.originalEvent.wheelDelta > 0) {
+//         // Up Scroll
 
-    } else {
-        // Down Scroll
+//     } else {
+//         // Down Scroll
+//         hideTopbar();
+
+//     }
+
+// });
+
+let position = $(window).scrollTop();
+ 
+$(window).scroll(function() {
+    let scroll = $(window).scrollTop();
+    if (scroll > position) {
         hideTopbar();
+        
+    } else {
 
     }
-
+    position = scroll;
 });
-
 
 // Contact form notification
 
