@@ -195,6 +195,9 @@ a.in-text {
   @media (min-width: 768px) {
     .projects__card--img {
       border-radius: 10px 0 10px 0; } }
+  .projects__card--img#colour-palettes {
+    background: url(../img/colour-palettes.png);
+    background-size: cover; }
 
 .projects__card--title {
   padding-left: 1em;
