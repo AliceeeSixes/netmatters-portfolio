@@ -30,12 +30,13 @@
     flex: 0 1 auto;
     margin: 20px 0;
     padding: 0;
+    
 
     @media (min-width: $break-medium) {
         min-width: 400px;
         max-width: 600px;
         flex: 1 1 auto;
-        border-radius: 10px 0 10px 0;
+
     }
     @media (min-width: $break-xl) {
         flex-basis: 25%;
@@ -50,7 +51,7 @@
 
 
     // corners
-    
+    border-radius: 10px 0 10px 0;
     border: 2px solid $wenge;
 
 
@@ -93,12 +94,11 @@
         background: $viking;
 
     }
-    @media (min-width: $break-medium) {
-        border-radius: 10px 0 10px 0;
-    }
 
-
+    border-radius: 10px 0 10px 0;
 }
+
+
 .projects__card--img {
     position: relative;
     padding: 0;

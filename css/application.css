@@ -143,13 +143,13 @@ a.in-text {
   background: #d0ccd0;
   transition: 0.3s ease;
   color: #605856;
+  border-radius: 10px 0 10px 0;
   border: 2px solid #605856; }
   @media (min-width: 768px) {
     .projects__card {
       min-width: 400px;
       max-width: 600px;
-      flex: 1 1 auto;
-      border-radius: 10px 0 10px 0; } }
+      flex: 1 1 auto; } }
   @media (min-width: 1200px) {
     .projects__card {
       flex-basis: 25%; } }
@@ -171,7 +171,8 @@ a.in-text {
   padding: 0;
   position: relative;
   overflow: clip;
-  background: #605856; }
+  background: #605856;
+  border-radius: 10px 0 10px 0; }
   .projects__card--img-container::before {
     transition: .3s ease;
     content: "";
@@ -181,9 +182,6 @@ a.in-text {
     height: 100%;
     opacity: 0%;
     background: #74d1db; }
-  @media (min-width: 768px) {
-    .projects__card--img-container {
-      border-radius: 10px 0 10px 0; } }
 
 .projects__card--img {
   position: relative;
