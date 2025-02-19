@@ -115,7 +115,11 @@
         border-radius: 10px 0 10px 0;
     }
     &#colour-palettes {
-        background: url(../img/colour-palettes.png);
+        background: url("../img/colour-palettes.png");
+        background-size: cover;
+    }
+    &#js-array {
+        background: url("../img/js-array.png");
         background-size: cover;
     }
 
