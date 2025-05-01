@@ -20,27 +20,7 @@
 
 
     <body class="animsition">
-        <nav id="nav__vertical">
-            <div id="nav__vertical--logo">
-                <a id="nav__vertical--logo-link" href="index.html"><img id="nav__vertical--logo-img" src="img/pfp.png"/></a>
-            </div>
-            <button class="darkmode-toggle" onclick="toggleDarkMode()">
-                <span class="toggle"><i class="fa fa-moon"></i></span><span class="darkmode-text">Dark Mode</span>
-            </button>
-            <a class="nav__vertical--button" href="about_me.html">About Me</a>
-            <a class="nav__vertical--button" href="#projects">My Portfolio</a>
-            <a class="nav__vertical--button" href="coding_templates.html">Coding Templates</a>
-            <a class="nav__vertical--button" href="scs_scheme.html">SCS Scheme</a>
-            <a class="nav__vertical--button" href="https://aliceeesixes.github.io/portfoliowebsite/" target="_blank">Music Portfolio</a>
-            <a class="nav__vertical--button contact" href="index.html#contact">Contact Me</a>
-
-            <div class="socials">
-                <a class="socials__link discord" href="https://discord.com/users/316241440462209025" target="_blank"><i class="fa-brands fa-discord"></i></a>
-                <a class="socials__link linkedin" href="https://www.linkedin.com/in/alice-stiles-605b1331a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a class="socials__link github" href="https://github.com/AliceeeSixes" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </div>
-            
-        </nav>
+        <?php include("inc/sidenav.php"); ?>
         <div class="nav__vertical--toggle">
             <button onclick="toggleSidebar()"><i class="fa fa-chevron-left"></i></button>
         </div>
@@ -63,33 +43,12 @@
             <div id="banner__end"></div>
 
 
-            <nav id="nav__horizontal">
-                <div class="nav__horizontal--pfp">
-                    <a href="index.html">
-                        <img src="img/pfp.png" />
-                    </a>
-                </div>
-                <div class="nav__horizontal--button-container"><a class="nav__horizontal--button" href="about_me.html">About Me</a></div>
-                <div class="nav__horizontal--button-container"><a class="nav__horizontal--button" href="#projects">My Portfolio</a></div>
-                <div class="nav__horizontal--button-container"><a class="nav__horizontal--button" href="coding_templates.html">Coding Templates</a></div>
-                <div class="nav__horizontal--button-container"><a class="nav__horizontal--button" href="scs_scheme.html">SCS Scheme</a></div>
-                <div class="nav__horizontal--button-container"><a class="nav__horizontal--button" href="https://aliceeesixes.github.io/portfoliowebsite" target="_blank">Music Portfolio</a></div>
-                <div class="nav__horizontal--button-container"><a class="nav__horizontal--button contact" href="index.html#contact">Contact Me</a></div>
-                <div class="nav__horizontal-row">
-                    <button class="darkmode-toggle" onclick="toggleDarkMode()">
-                        <span class="toggle"><i class="fa fa-moon"></i></span><span class="darkmode-text">Dark Mode</span>
-                    </button>
-                </div>
-                <div class="nav__horizontal--toggle">
-                    <button onclick="toggleTopbar()"><i class="fa fa-chevron-up"></i></button>
-                </div>
-
-            </nav>
+            <?php include("inc/topnav.php"); ?>
 
 
             <div class="snap-point"></div>
             
-            <section id="projects">
+            <section id="projects" class="container">
                 <h1 class="section__title">My Projects</h1>
                 
 
@@ -157,7 +116,7 @@
 
             <!-- Contact Form -->
 
-            <section id="contact" class="snap-point">
+            <section id="contact" class="snap-point container">
                 <div class="contact__notif">
                     <i class="fa fa-xmark"></i>
                     <h3>JavaScript is not working properly, this form will not submit</h3>
@@ -174,7 +133,7 @@
 
 
                     <div class="contact__form">
-                        <form id="contact__form--form">
+                        <form id="contact__form--form" method="POST" onsubmit="return validateForm()" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" novalidate>
                             <div class="input name"><input type="text" placeholder="First Name*" id="fname" name="fname" /></div>
                             <div class="input name"><input type="text" placeholder="Last Name*" id="lname" name="lname" /></div>
                             
@@ -189,7 +148,7 @@
                 </div>
 
             </section>
-            <footer><div class="footer-inside">Alice Stiles &copy; 2025</div></footer>
+            <?php include("inc/footer.php"); ?>
         </main>
 
 
@@ -201,6 +160,7 @@
         <script src="js/animsition/dist/js/animsition.min.js"></script>
         <script src="js/form-validation/dist/jquery.validate.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/form.js"></script>
     </body>
 
 

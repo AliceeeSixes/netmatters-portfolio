@@ -56,7 +56,7 @@ main {
     @media (min-width: $break-large) {
         overflow-x: hidden;
     }
-    @media (min-width: $break-xl) {
+    @media (min-width: $break-xxl) {
         padding-left: 0;
     }
 
@@ -154,3 +154,19 @@ a.in-text {
     }
 }
 
+.container {
+    width: 90%;
+    @media (min-width: $break-small) {
+        width: 500px;
+    }
+    @media (min-width: $break-large) {
+        width: 720px;
+    }
+    @media (min-width: $break-xl) {
+        width: 800px;
+    }
+    @media (min-width: $break-xxl) {
+        width: 1200px;
+    }
+
+}

@@ -3,10 +3,6 @@
     grid-auto-flow: row;
     margin: 50px auto;
     color: $wenge;
-    width: 90%;
-    @media (min-width: $break-small) {
-        padding: 20px;
-    }
     @media (min-width: $break-large) {
         grid-template-columns: 1fr 1fr;
     }
@@ -27,6 +23,7 @@
 .contact__notif {
     display: flex;
     position: relative;
+    justify-content: space-between;
     width: 100%;
     height: fit-content;
     border-radius: 5px;
@@ -35,20 +32,18 @@
 
     background: rgba(255, 0, 0, 0.5);
 
-    .fa {
-        position: absolute;
-        top: 3px;
-        right: 5px;
-        text-align: center;
-        align-content: center;
-        cursor: pointer;
-    }
     h3 {
-        margin: auto;
         text-align: center;
         align-self: center;
 
     }
+
+    .close-message {
+        margin: 0px 10px;
+        cursor: pointer;
+        font-size: 2em;
+    }
+
 
 }
 
@@ -63,4 +58,8 @@ label {
 
 .input {
     position: relative;
+}
+
+.form-error {
+    border: 2px solid red;
 }

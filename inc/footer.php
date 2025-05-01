@@ -1,0 +1,1 @@
+<footer><div class="footer-inside">Alice Stiles &copy; 2025</div></footer>

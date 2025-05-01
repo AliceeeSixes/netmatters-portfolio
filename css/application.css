@@ -32,7 +32,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     body {
       display: grid;
       grid-template-areas: "nav toggle main";
@@ -49,13 +49,13 @@ main {
   position: relative;
   background: #fbfcff;
   outline: 2px solid #605856; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     main {
       float: right; } }
   @media (min-width: 992px) {
     main {
       overflow-x: hidden; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 1450px) {
     main {
       padding-left: 0; } }
 
@@ -71,7 +71,7 @@ h1 {
   padding: 20px;
   font-weight: 400;
   font-size: 2.5em; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     .section__title {
       margin: 20px auto 20px auto; } }
 
@@ -123,13 +123,28 @@ a.in-text {
   .dark h1 {
     color: inherit; }
 
+.container {
+  width: 90%; }
+  @media (min-width: 600px) {
+    .container {
+      width: 500px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 720px; } }
+  @media (min-width: 1100px) {
+    .container {
+      width: 800px; } }
+  @media (min-width: 1450px) {
+    .container {
+      width: 1200px; } }
+
 #projects {
-  width: 90%;
   margin: auto; }
   #projects h1 {
     margin-bottom: 20px; }
 
 #projects__grid {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -137,22 +152,20 @@ a.in-text {
 
 .projects__card {
   height: 400px;
-  flex: 0 1 auto;
   margin: 20px 0;
   padding: 0;
+  width: 95%;
   background: #d0ccd0;
   transition: 0.3s ease;
   color: #605856;
   border-radius: 10px 0 10px 0;
   border: 2px solid #605856; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     .projects__card {
-      min-width: 400px;
-      max-width: 600px;
-      flex: 1 1 auto; } }
-  @media (min-width: 1200px) {
+      width: 100%; } }
+  @media (min-width: 1450px) {
     .projects__card {
-      flex-basis: 25%; } }
+      width: 500px; } }
   .projects__card:hover, .projects__card:focus-within {
     transform: translate(0, -10px);
     box-shadow: 0 10px 5px #605856; }
@@ -165,7 +178,6 @@ a.in-text {
   height: 100%; }
 
 .projects__card--img-container {
-  height: 203px;
   border: 3px transparent;
   margin: 0;
   padding: 0;
@@ -187,12 +199,11 @@ a.in-text {
   position: relative;
   padding: 0;
   margin: 0;
-  width: 100%;
   height: 200px;
   border: none;
   background: url(../img/NM-remake.png);
   background-size: cover; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     .projects__card--img {
       border-radius: 10px 0 10px 0; } }
   .projects__card--img#colour-palettes {
@@ -229,7 +240,7 @@ a.in-text {
   height: 100vh;
   font-size: 1.4em;
   display: flex; }
-  @media (min-width: 1200px) {
+  @media (min-width: 1100px) {
     #banner {
       height: 450px; } }
 
@@ -268,7 +279,7 @@ a.in-text {
 
 .page__arrow {
   font-size: 20px; }
-  @media (min-width: 1200px) {
+  @media (min-width: 1100px) {
     .page__arrow {
       display: none; } }
 
@@ -287,7 +298,7 @@ nav {
   height: 100%;
   z-index: 0;
   border-right: 3px solid #605856; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     #nav__vertical {
       display: block;
       grid-area: nav; } }
@@ -349,7 +360,7 @@ nav {
   top: 0;
   padding-top: 80px;
   box-shadow: 0 0 10px black; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     #nav__horizontal {
       display: none; } }
   #nav__horizontal::after {
@@ -361,7 +372,7 @@ nav {
     height: 1px;
     background: #605856;
     margin: auto; }
-    @media (min-width: 768px) {
+    @media (min-width: 780px) {
       #nav__horizontal::after {
         display: none; } }
 
@@ -476,7 +487,7 @@ nav {
     cursor: pointer; }
     .nav__vertical--toggle button:hover {
       color: #74d1db; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     .nav__vertical--toggle {
       display: flex; } }
 
@@ -531,11 +542,7 @@ nav {
   display: grid;
   grid-auto-flow: row;
   margin: 50px auto;
-  color: #605856;
-  width: 90%; }
-  @media (min-width: 576px) {
-    .contact__grid {
-      padding: 20px; } }
+  color: #605856; }
   @media (min-width: 992px) {
     .contact__grid {
       grid-template-columns: 1fr 1fr; } }
@@ -551,23 +558,20 @@ nav {
 .contact__notif {
   display: flex;
   position: relative;
+  justify-content: space-between;
   width: 100%;
   height: fit-content;
   border-radius: 5px;
   border: 2px solid #605856;
   padding: 5px;
   background: rgba(255, 0, 0, 0.5); }
-  .contact__notif .fa {
-    position: absolute;
-    top: 3px;
-    right: 5px;
-    text-align: center;
-    align-content: center;
-    cursor: pointer; }
   .contact__notif h3 {
-    margin: auto;
     text-align: center;
     align-self: center; }
+  .contact__notif .close-message {
+    margin: 0px 10px;
+    cursor: pointer;
+    font-size: 2em; }
 
 label {
   position: absolute;
@@ -578,6 +582,9 @@ label {
 
 .input {
   position: relative; }
+
+.form-error {
+  border: 2px solid red; }
 
 footer {
   height: 50px;
@@ -598,9 +605,6 @@ footer {
 section {
   color: #605856;
   background: #fbfcff; }
-  @media (min-width: 576px) {
-    section {
-      padding: 20px; } }
   section h1 {
     margin-bottom: 20px; }
 
@@ -624,13 +628,13 @@ section.hero {
     font-family: "Funnel Sans", sans-serif;
     font-weight: 400;
     list-style-position: inside; }
-    @media (min-width: 576px) {
+    @media (min-width: 600px) {
       section.hero p,
       section.hero h1,
       section.hero h2,
       section.hero h3 {
         padding: 20px; } }
-  @media (min-width: 576px) {
+  @media (min-width: 600px) {
     section.hero {
       font-size: 1.5em; } }
   @media (min-width: 992px) {
@@ -642,12 +646,15 @@ section.hero {
 .snap-point {
   scroll-snap-align: start; }
 
+#contact {
+  margin: auto; }
+
 #treehouse {
   width: 100%;
   background: url("../img/treehouse.png") no-repeat center, linear-gradient(to left, #d0ccd0, #fbfcff 50%);
   background-attachment: fixed;
   background-size: contain; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     #treehouse {
       background-position: calc(50% + 125px), 50%; } }
   #treehouse a {
@@ -664,12 +671,12 @@ section.about-me {
     max-width: 800px;
     font-size: 1.5em;
     text-wrap: balance; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1450px) {
       section.about-me p {
         font-size: 1.7em; } }
   section.about-me h1 {
     font-size: 2em; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1450px) {
       section.about-me h1 {
         font-size: 2.2em; } }
   section.about-me * {
@@ -778,7 +785,7 @@ section.about-me:nth-of-type(5) * {
 
 #netmatters-logo {
   padding: 10px; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     #netmatters-logo {
       padding: 20px; } }
 
@@ -858,14 +865,14 @@ form {
   grid-auto-rows: min-content;
   gap: 20px;
   margin-bottom: 50px; }
-  @media (min-width: 1200px) {
+  @media (min-width: 1100px) {
     form {
       grid-template-columns: 1fr 1fr; } }
 
 .input {
   position: relative;
   font-weight: 300; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     .input {
       grid-column: span 2; }
       .input.name {
@@ -873,7 +880,7 @@ form {
   @media (min-width: 992px) {
     .input.name {
       grid-column: span 2; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 1100px) {
     .input.name {
       grid-column: span 1; } }
   .input::after {
@@ -917,7 +924,7 @@ textarea {
     cursor: pointer;
     background-color: #d0ccd0;
     font-weight: 400; }
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     .submit {
       grid-column: span 2; } }
   .submit:hover input, .submit:focus-within input {
