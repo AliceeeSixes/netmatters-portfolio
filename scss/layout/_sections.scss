@@ -130,6 +130,9 @@ section.about-me {
 
 }
 
+
+
+
 @each $number, $image in $about-me--images {
     section.about-me:nth-of-type(#{$number})::after {
         @if $number % 2 == 0 {

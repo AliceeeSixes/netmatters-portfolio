@@ -27,7 +27,7 @@
     width: 100%;
     height: fit-content;
     border-radius: 5px;
-    border: 2px solid $wenge;
+    border: 1px solid $wenge;
     padding: 5px;
 
     background: rgba(255, 0, 0, 0.5);
@@ -61,5 +61,5 @@ label {
 }
 
 .form-error {
-    border: 2px solid red;
+    border: 1px solid red !important;
 }

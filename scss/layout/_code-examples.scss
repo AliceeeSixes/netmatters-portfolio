@@ -1,0 +1,79 @@
+#examples {
+    h3 {
+        font-size: 1.5em;
+    }
+    h3,
+    h4 {
+        text-decoration: underline;
+    }
+    h4 {
+        margin: 0;
+    }
+
+    h3 {
+        text-align: center;
+    }
+    @media (min-width: $break-large) {
+        h3 {
+            text-align: left;
+        }
+    }
+
+    .language-logo {
+        height: 20px;
+        align-self: center;
+        padding: 0 5px;
+        margin: auto;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+
+    }
+    .languages-used h4 {
+        width: fit-content;
+        margin: auto;
+
+    }
+    ul {
+        padding: 16px 0;
+        width: fit-content;
+        margin: auto;
+
+    }
+    a {
+        color: $viking;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.code-example {
+    margin-bottom: 50px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background: $french-gray;
+}
+
+.code-example-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    @media(min-width: $break-large) {
+        grid-template-columns: 1fr 1fr;
+    }
+    h4, p {
+        text-align: center;
+    }
+    @media (min-width: $break-large) {
+        h4, p {
+            text-align: left;
+        }
+    }
+
+}

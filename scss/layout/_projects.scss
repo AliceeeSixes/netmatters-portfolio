@@ -48,7 +48,7 @@
 
     // corners
     border-radius: 10px 0 10px 0;
-    border: 2px solid $wenge;
+    // border: 2px solid $wenge;
 
 
     // hover lift
@@ -145,4 +145,26 @@
 
     position: absolute;
     bottom: 0;
+}
+
+.languages {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0 5px;
+    background: white;
+    // border: 2px solid $wenge;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 5px;
+    width: 70px;
+    text-align: center;
+    &.php {
+        background: #4f5b93;
+        color: white;
+    }
+    &.js {
+        background: #f0dc4e;
+        color: $wenge;
+    }
 }

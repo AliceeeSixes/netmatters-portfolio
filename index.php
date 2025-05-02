@@ -58,7 +58,9 @@
                     <div class="projects__card">
                         <a class="projects__card--link" href="https://netmatters.alice-stiles.netmatters-scs.co.uk/" target="_blank">
                             <div class="projects__card--img-container">
-                                <div class="projects__card--img"></div>
+                                <div class="projects__card--img">
+                                    <div class="languages php">PHP</div>
+                                </div>
                             </div>
                             <h3 class="projects__card--title">Netmatters Homepage Recreation</h3>
                             <p class="projects__card--desc">A copy of the Netmatters homepage made from scratch to match the original as closely as possible</p>
@@ -69,7 +71,9 @@
                     <div class="projects__card">
                         <a class="projects__card--link" href="https://aliceeesixes.github.io/colour-palettes/" target="_blank">
                             <div class="projects__card--img-container">
-                                <div class="projects__card--img" id="colour-palettes"></div>
+                                <div class="projects__card--img" id="colour-palettes">
+                                    <div class="languages js">jQuery</div>
+                                </div>
                             </div>
                             <h3 class="projects__card--title">Colour Palette Creator</h3>
                             <p class="projects__card--desc">A simple web app for creating and manipulating colour palettes. Built with HTML, CSS and jQuery.</p>
@@ -80,7 +84,9 @@
                     <div class="projects__card">
                         <a class="projects__card--link" href="https://js-array.alice-stiles.netmatters-scs.co.uk/" target="_blank">
                             <div class="projects__card--img-container">
-                                <div class="projects__card--img" id="js-array"></div>
+                                <div class="projects__card--img" id="js-array">
+                                    <div class="languages js">jQuery</div>
+                                </div>
                             </div>
                             <h3 class="projects__card--title">JS Image Array</h3>
                             <p class="projects__card--desc">A website that generates images using an API, and saves them to collections tied to email addresses. This project uses HTML, CSS, and jQuery</p>

@@ -1,1 +1,1 @@
-<footer><div class="footer-inside">Alice Stiles &copy; 2025</div></footer>
+<footer><div class="footer-inside">Alice Stiles &copy; <?php echo date("Y")?></div></footer>

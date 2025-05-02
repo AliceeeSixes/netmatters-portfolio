@@ -60,7 +60,8 @@ body.darkmode {
 
     .projects__card,
     input,
-    textarea {
+    textarea,
+    .code-example {
         background-color: $scorpion;
     }
 
@@ -90,14 +91,11 @@ body.darkmode {
         border-top: 1px solid $white;
     }
 
-    .projects__card {
-        border: 2px solid $scorpion;
-    }
 
     input,
     textarea,
     .contact__notif {
-        border: 2px solid $mine-shaft;
+        border: 1px solid $mine-shaft;
     }
 
     // Shadows
@@ -118,6 +116,6 @@ body.darkmode {
     input:focus-within,
     textarea:focus-within {
         background: lighten($scorpion, 5%);
-        border: 2px solid $viking;
+        border: 1px solid $viking;
     }
 }
