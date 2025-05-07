@@ -3,7 +3,7 @@
     position: relative;
     height: 100vh;
     font-size: 1.4em;
-    @media (min-width: $break-xl) {
+    @media (min-width: $break-xxl) {
         height: $banner__height;
     }
     display: flex;
@@ -52,7 +52,7 @@
 .page__arrow {
     font-size: 20px;
 
-    @media (min-width: $break-xl) {
+    @media (min-width: $break-xxl) {
         display: none;
     }
 }

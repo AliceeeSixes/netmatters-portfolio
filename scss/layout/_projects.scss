@@ -77,7 +77,6 @@
     padding: 0;
     position: relative;
     overflow: clip;
-    background: $wenge;
     &::before {
         transition: .3s ease;
         content: "";
@@ -100,13 +99,17 @@
     margin: 0;
     height: 200px;
     border: none;
-    background: url(../img/NM-remake.png);
+    background: rgba(0, 0, 0, 0.2);
     background-size: cover;
 
 
     // borders
     @media (min-width: $break-medium) {
         border-radius: 10px 0 10px 0;
+    }
+    &#nm-remake {
+        background: url("../img/NM-remake.png");
+        background-size: cover;
     }
     &#colour-palettes {
         background: url("../img/colour-palettes.png");

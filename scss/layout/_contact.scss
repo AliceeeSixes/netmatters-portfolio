@@ -37,11 +37,19 @@
         align-self: center;
 
     }
+    p {
+        align-self: center;
+        text-align: center;
+    }
 
     .close-message {
         margin: 0px 10px;
         cursor: pointer;
         font-size: 2em;
+    }
+
+    &.good {
+        background: rgba(0, 255, 0, 0.5);
     }
 
 

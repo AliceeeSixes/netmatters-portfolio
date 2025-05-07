@@ -183,7 +183,6 @@ a.in-text {
   padding: 0;
   position: relative;
   overflow: clip;
-  background: #605856;
   border-radius: 10px 0 10px 0; }
   .projects__card--img-container::before {
     transition: .3s ease;
@@ -201,11 +200,14 @@ a.in-text {
   margin: 0;
   height: 200px;
   border: none;
-  background: url(../img/NM-remake.png);
+  background: rgba(0, 0, 0, 0.2);
   background-size: cover; }
   @media (min-width: 780px) {
     .projects__card--img {
       border-radius: 10px 0 10px 0; } }
+  .projects__card--img#nm-remake {
+    background: url("../img/NM-remake.png");
+    background-size: cover; }
   .projects__card--img#colour-palettes {
     background: url("../img/colour-palettes.png");
     background-size: cover; }
@@ -258,7 +260,7 @@ a.in-text {
   height: 100vh;
   font-size: 1.4em;
   display: flex; }
-  @media (min-width: 1100px) {
+  @media (min-width: 1450px) {
     #banner {
       height: 450px; } }
 
@@ -297,7 +299,7 @@ a.in-text {
 
 .page__arrow {
   font-size: 20px; }
-  @media (min-width: 1100px) {
+  @media (min-width: 1450px) {
     .page__arrow {
       display: none; } }
 
@@ -586,10 +588,15 @@ nav {
   .contact__notif h3 {
     text-align: center;
     align-self: center; }
+  .contact__notif p {
+    align-self: center;
+    text-align: center; }
   .contact__notif .close-message {
     margin: 0px 10px;
     cursor: pointer;
     font-size: 2em; }
+  .contact__notif.good {
+    background: rgba(0, 255, 0, 0.5); }
 
 label {
   position: absolute;
@@ -838,34 +845,36 @@ section[class^="slant-"] {
 
 #examples h3 {
   font-size: 1.5em; }
-#examples h3,
-#examples h4 {
-  text-decoration: underline; }
 #examples h4 {
   margin: 0; }
 #examples h3 {
-  text-align: center; }
+  text-align: center;
+  font-weight: 500; }
 @media (min-width: 992px) {
   #examples h3 {
     text-align: left; } }
 #examples .language-logo {
   height: 20px;
   align-self: center;
-  padding: 0 5px;
+  padding-right: 5px;
   margin: auto; }
 #examples li {
-  display: grid;
-  grid-template-columns: 50px 1fr;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: fit-content; }
-#examples .languages-used h4 {
-  width: fit-content;
-  margin: auto; }
 #examples ul {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
   padding: 16px 0;
   width: fit-content;
-  margin: auto; }
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center; }
+  @media (min-width: 992px) {
+    #examples ul {
+      margin: 0; } }
 #examples a {
   color: #74d1db; }
   #examples a:hover {
@@ -877,16 +886,13 @@ section[class^="slant-"] {
   padding: 5px 20px;
   background: #d0ccd0; }
 
-.code-example-info {
-  display: grid;
-  grid-template-columns: 1fr; }
+.project-description p {
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin: 20px 0; }
   @media (min-width: 992px) {
-    .code-example-info {
-      grid-template-columns: 1fr 1fr; } }
-  .code-example-info h4, .code-example-info p {
-    text-align: center; }
-  @media (min-width: 992px) {
-    .code-example-info h4, .code-example-info p {
+    .project-description p {
       text-align: left; } }
 
 .code-example-code {
@@ -899,25 +905,31 @@ section[class^="slant-"] {
   font-family: monospace; }
 
 .yellow {
-  color: #d1c489; }
+  color: #f7e69c; }
 
 .purple {
-  color: #a376af; }
+  color: #ce93df; }
 
 .blue {
-  color: #244b8f; }
+  color: #4a7fdb; }
 
 .light-blue {
-  color: #95d2f3; }
+  color: #9cdcff; }
 
 .orange {
-  color: #bd6334; }
+  color: #ff8847; }
 
 .red {
-  color: #984a3e; }
+  color: #b95343; }
 
 .green {
   color: #44bd9e; }
+
+.dark-green {
+  color: #44971d; }
+
+.white {
+  color: white; }
 
 .indent {
   padding-left: 20px; }
@@ -1065,7 +1077,8 @@ body.darkmode section,
 body.darkmode nav,
 body.darkmode .footer-inside,
 body.darkmode section.hero.dark,
-body.darkmode .darkmode-toggle {
+body.darkmode .darkmode-toggle,
+body.darkmode .code-example-code {
   background-color: #404040; }
 body.darkmode .dark,
 body.darkmode #nav__horizontal::after,

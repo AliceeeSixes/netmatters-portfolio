@@ -74,3 +74,9 @@ function formError(message) {
     $("#contact").prepend($newdiv);
     console.log("form error");
 }
+
+function formSuccess(message) {
+    let $newdiv = $(`<div class='contact__notif good'><p>${message}</p><div class="close-message">&times;</div></div>`);
+    $("#contact").prepend($newdiv);
+    console.log("form success");
+}

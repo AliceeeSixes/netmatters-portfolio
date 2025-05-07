@@ -116,7 +116,8 @@ $("#contact").on("click", ".close-message", (event) => {
 
 });
 
-$(".contact__notif").hide();
+$("#nojs").hide();
+
 
 
 

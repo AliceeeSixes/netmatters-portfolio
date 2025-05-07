@@ -58,7 +58,7 @@
                     <div class="projects__card">
                         <a class="projects__card--link" href="https://netmatters.alice-stiles.netmatters-scs.co.uk/" target="_blank">
                             <div class="projects__card--img-container">
-                                <div class="projects__card--img">
+                                <div class="projects__card--img" id="nm-remake">
                                     <div class="languages php">PHP</div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
                                 <div class="projects__card--img"></div>
                             </div>
                             <h3 class="projects__card--title">Project Four</h3>
-                            <p class="projects__card--desc">Descriptive text Epšiš pīšunu bašiwā uznāšu. Eltum ištawša ibašši milku. Epšiš pīšunu bašiwā uznāšu. Naṭûmma ana pîšu siqri ea īpu. Epšiš pīšunu bašiwā uznāšu. Ištar zumrā rašubti ilāti. Ayyûm narbiaš išannan mannu. Epšiš pīšunu bašiwā uznāšu. Ištar zumrā rašubti ilāti. Qa-a-at in-ilī atar nazzāzu. Šāt mēliṣim ru'āmam labša. Šāt mēliṣim ru'āmam labša. Libluṭmi šarrašu lirāmšu ad-dāri. Ardat tattadû umma tarašš. Naṭûmma ana pîšu siqri ea īpu. Qa-a-at in-ilī atar nazzāzu. Mahrīšun ušebbi li'ī u ayyālī na-am-ra-i-. Kabtat amassa elšunu haltatm. Bibel libbīša zamar lalêš. Ištar zumrā rašubti ilāti. Bāštum mašrahu lamassum šēdu. Ištar narbiaš išannan mannu. Kabtat amassa elšunu haltatm. Ayyûm narbiaš išannan mannu. Ištar inilī atar nazzazzu. [š]aptīn duššupat balāṭum pīš. U naphar kalīšunu dadm. Šāt mēliṣim ru'āmam labša. Ammi-ditāna ellam niqī qātīš. U mitguram tebēl šīm. Šīmat mimmami qātišša tamha. Epšiš pīšunu bašiwā uznāšu. Ištar inilī atar nazzazzu. Išti anim hāmerīša tēteršaššu. Libluṭmi šarrašu lirāmšu ad-dāri. Ayyûm narbiaš išannan mannu. Ištar zumrā rašubti ilāti. Šarhiš itnaqqišunūt niqiašu ella. Libluṭmi šarrašu lirāmšu ad-dāri. Bibel libbīša zamar lalêš. Puhriššun etel qabûša šūtu. Bibel libbīša zamar lalêš. Iltam zumrā rašubti ilāti. Bāštum mašrahu lamassum šēdu. Qa-a-at in-ilī atar nazzāzu. Eltum ištawša ibašši milku. Ayyûm narbiaš išannan mannu. Išti anim hāmerīša tēteršaššu. Ayyûm narbiaš išannan mannu.</p>
+                            <p class="projects__card--desc">Coming soon...</p>
                             <p class="projects__card--arrow"><span class="hover-underline">View Project <span class="fa fa-arrow-right"></span></span></p>
                         </a>
                     </div>
@@ -111,7 +111,7 @@
                                 <div class="projects__card--img"></div>
                             </div>
                             <h3 class="projects__card--title">Project Five</h3>
-                            <p class="projects__card--desc">Descriptive text Epšiš pīšunu bašiwā uznāšu. Eltum ištawša ibašši milku. Epšiš pīšunu bašiwā uznāšu. Naṭûmma ana pîšu siqri ea īpu. Epšiš pīšunu bašiwā uznāšu. Ištar zumrā rašubti ilāti. Ayyûm narbiaš išannan mannu. Epšiš pīšunu bašiwā uznāšu. Ištar zumrā rašubti ilāti. Qa-a-at in-ilī atar nazzāzu. Šāt mēliṣim ru'āmam labša. Šāt mēliṣim ru'āmam labša. Libluṭmi šarrašu lirāmšu ad-dāri. Ardat tattadû umma tarašš. Naṭûmma ana pîšu siqri ea īpu. Qa-a-at in-ilī atar nazzāzu. Mahrīšun ušebbi li'ī u ayyālī na-am-ra-i-. Kabtat amassa elšunu haltatm. Bibel libbīša zamar lalêš. Ištar zumrā rašubti ilāti. Bāštum mašrahu lamassum šēdu. Ištar narbiaš išannan mannu. Kabtat amassa elšunu haltatm. Ayyûm narbiaš išannan mannu. Ištar inilī atar nazzazzu. [š]aptīn duššupat balāṭum pīš. U naphar kalīšunu dadm. Šāt mēliṣim ru'āmam labša. Ammi-ditāna ellam niqī qātīš. U mitguram tebēl šīm. Šīmat mimmami qātišša tamha. Epšiš pīšunu bašiwā uznāšu. Ištar inilī atar nazzazzu. Išti anim hāmerīša tēteršaššu. Libluṭmi šarrašu lirāmšu ad-dāri. Ayyûm narbiaš išannan mannu. Ištar zumrā rašubti ilāti. Šarhiš itnaqqišunūt niqiašu ella. Libluṭmi šarrašu lirāmšu ad-dāri. Bibel libbīša zamar lalêš. Puhriššun etel qabûša šūtu. Bibel libbīša zamar lalêš. Iltam zumrā rašubti ilāti. Bāštum mašrahu lamassum šēdu. Qa-a-at in-ilī atar nazzāzu. Eltum ištawša ibašši milku. Ayyûm narbiaš išannan mannu. Išti anim hāmerīša tēteršaššu. Ayyûm narbiaš išannan mannu.</p>
+                            <p class="projects__card--desc">Coming soon...</p>
                             <p class="projects__card--arrow"><span class="hover-underline">View Project <span class="fa fa-arrow-right"></span></span></p>
                         </a>
                     </div>
@@ -123,10 +123,33 @@
             <!-- Contact Form -->
 
             <section id="contact" class="snap-point container">
-                <div class="contact__notif">
-                    <i class="fa fa-xmark"></i>
-                    <h3>JavaScript is not working properly, this form will not submit</h3>
-                </div>
+                <?php
+                require_once("inc/connection.php");
+                
+                if (isset($_POST["submit"])) {
+                    $fname = htmlspecialchars($_POST["fname"]);
+                    $lname = htmlspecialchars($_POST["lname"]);
+                    $email = htmlspecialchars($_POST["email"]);
+                    $subject = htmlspecialchars($_POST["subject"]);
+                    $message = htmlspecialchars($_POST["message"]);
+                    $timestamp = htmlspecialchars($_POST["timestamp"]);
+
+
+                    if (timestampAppears($timestamp)) {
+                        echo "<div class='contact__notif bad'><p>Error: Duplicate form request</p><div class='close-message'>&times;</div></div>";
+                    } else if (!($fname && $lname && $email && $subject && $message)) {
+                        echo "<div class='contact__notif bad'><p>Error: Missing fields</p><div class='close-message'>&times;</div></div>";
+                    } else if (!$timestamp) {
+                        echo "<div class='contact__notif bad'><p>Error: Missing timecode (try resubmitting)</p><div class='close-message'>&times;</div></div>";
+                    } else {
+                        storeMessage($fname, $lname, $email, $subject, $message, $timestamp);
+                        sendEmail($fname, $lname, $email, $subject, $message);
+                        echo "<div class='contact__notif good'><p>Form Submitted</p><div class='close-message'>&times;</div></div>";
+                    }
+                    
+                }
+                ?>
+                <div class='contact__notif bad' id="nojs"><p>Error: JavaScript not functioning properly</p><div class='close-message'>&times;</div></div>
                 <div class="contact__grid">
 
                     <div class="contact__description">
@@ -147,6 +170,8 @@
                             <div class="input"><input type="text" placeholder="Subject*" id="subject" name="subject" /></div>
 
                             <div class="input"><textarea id="message" name="message" placeholder="Message" rows="5"></textarea></div>
+                            <input type="hidden" value="true" name="submit" />
+                            <input type="hidden" value="<?php echo time();?>" name="timestamp" />
                             <div class="submit"><input type="submit" /></div>
                         </form>
                     </div>
