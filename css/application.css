@@ -1047,6 +1047,9 @@ textarea {
   .submit:hover input, .submit:focus-within input {
     background-color: #74d1db; }
 
+html.darkmode {
+  background: #333; }
+
 body.darkmode section,
 body.darkmode .section__title,
 body.darkmode nav,

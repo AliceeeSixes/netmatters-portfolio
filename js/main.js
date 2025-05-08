@@ -1,10 +1,22 @@
-$(".animsition").animsition({
-    inClass: "fade-in",
-    outClass: "fade-out",
-    linkElement: 'a:not([href^="#"]):not([target="_blank"])',
-    inDuration: 400,
-    outDuration: 600
-});
+// initialise dark mode
+let darkMode = localStorage.getItem("darkMode");
+console.log(darkMode);
+if (darkMode === null) {
+    darkMode = false;
+}
+if (darkMode == "true") {
+    darkMode = true;
+    $("body").addClass("darkmode");
+    $("html").addClass("darkmode");
+    $("span.darkmode-text").text("Dark Mode: On");
+} else {
+    darkMode = false;
+    $("body").removeClass("darkmode");
+    $("html").removeClass("darkmode");
+    $("span.darkmode-text").text("Dark Mode: Off");
+}
+
+
 
 
 
@@ -122,21 +134,7 @@ $("#nojs").hide();
 
 
 
-// initialise dark mode
-let darkMode = localStorage.getItem("darkMode");
-console.log(darkMode);
-if (darkMode === null) {
-    darkMode = false;
-}
-if (darkMode == "true") {
-    darkMode = true;
-    $("body").addClass("darkmode");
-    $("span.darkmode-text").text("Dark Mode: On");
-} else {
-    darkMode = false;
-    $("body").removeClass("darkmode")
-    $("span.darkmode-text").text("Dark Mode: Off");
-}
+
 
 
 // dark mode functionality
