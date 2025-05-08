@@ -22,12 +22,13 @@
 
     <body>
         <?php include("inc/sidenav.php"); ?>
-        <div class="nav__vertical--toggle">
-            <button onclick="toggleSidebar()"><i class="fa fa-chevron-left"></i></button>
-        </div>
+
 
         <main>
-            
+            <div class="nav__vertical--toggle">
+                <button onclick="toggleSidebar()"><i class="fa fa-chevron-left"></i></button>
+            </div>
+                
 
             <?php include("inc/topnav.php"); ?>
 

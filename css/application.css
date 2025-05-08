@@ -698,12 +698,14 @@ section.about-me {
     text-wrap: balance; }
     @media (min-width: 1450px) {
       section.about-me p {
-        font-size: 1.7em; } }
+        font-size: 1.7em;
+        padding: 50px 0; } }
   section.about-me h1 {
     font-size: 2em; }
     @media (min-width: 1450px) {
       section.about-me h1 {
-        font-size: 2.2em; } }
+        font-size: 2.2em;
+        padding: 20px 0; } }
   section.about-me * {
     animation: 1s ease 1 fadeInSlide; }
   section.about-me h1,
